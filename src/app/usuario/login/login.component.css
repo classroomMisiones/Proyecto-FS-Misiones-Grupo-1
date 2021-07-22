@@ -10,11 +10,16 @@ body{
     color:var(--light);
 }
 
-.bg-dark {background-color: var(--dark) !important;}
+/*.bg-light {background-color: var(--dark) !important;}*/
 .bg-dark-x{background-color: var(--dark-x);}
-
-.form-control{
+ 
+.form-control, .btn {
     min-height: 3.125rem;
     line-height:inherit;
    
+}
+.img-1 {
+    background-size: cover;
+    background-position: center;
+  
 }
