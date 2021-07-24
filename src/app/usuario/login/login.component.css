@@ -16,6 +16,8 @@ body{
 .form-control, .btn {
     min-height: 3.125rem;
     line-height:inherit;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
    
 }
 .img-1 {
