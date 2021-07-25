@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './usuario/login/login.component';
@@ -22,7 +23,8 @@ import { UltimasTransferenciasPesosComponent } from './modulo-pesos/ultimas-tran
     UltimasTransferenciasPesosComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
     
   ],
   providers: [],
