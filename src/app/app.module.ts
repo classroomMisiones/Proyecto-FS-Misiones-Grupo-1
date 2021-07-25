@@ -7,6 +7,8 @@ import { RegistrationFormComponent } from './usuario/registration-form/registrat
 
 import { VenderCriptoMonedaComponent } from './CriptoMoneda/vender-cripto-moneda/vender-cripto-moneda.component';
 import { ModuloPesosComponent } from './Inicio/modulo-pesos/modulo-pesos.component';
+import { NavbarComponent } from './navbarFooter/navbar/navbar.component';
+import { FooterComponent } from './navbarFooter/footer/footer.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { ModuloPesosComponent } from './Inicio/modulo-pesos/modulo-pesos.compone
     RegistrationFormComponent,
     LoginComponent,
     VenderCriptoMonedaComponent,
-    ModuloPesosComponent
+    ModuloPesosComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule
