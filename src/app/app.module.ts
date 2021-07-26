@@ -8,6 +8,8 @@ import { RegistrationFormComponent } from './usuario/registration-form/registrat
 
 import { VenderCriptoMonedaComponent } from './CriptoMoneda/vender-cripto-moneda/vender-cripto-moneda.component';
 import { ModuloPesosComponent } from './Inicio/modulo-pesos/modulo-pesos.component';
+import { NavbarComponent } from './navbarFooter/navbar/navbar.component';
+import { FooterComponent } from './navbarFooter/footer/footer.component';
 
 import { PerfilUsuarioComponent } from './usuario/perfil-usuario/perfil-usuario.component';
 
@@ -23,6 +25,8 @@ import { UltimasTransferenciasPesosComponent } from './modulo-pesos/ultimas-tran
     LoginComponent,
     VenderCriptoMonedaComponent,
     ModuloPesosComponent,
+    NavbarComponent,
+    FooterComponent,
     PerfilUsuarioComponent,
     TransferirPesosComponent,
     UltimasTransferenciasPesosComponent
