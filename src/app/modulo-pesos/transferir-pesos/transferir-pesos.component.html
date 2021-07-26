@@ -1,0 +1,39 @@
+<div class="row col-xs-12">
+    <label style="padding-bottom: 3px;">Transferir Dinero</label>
+</div>
+
+<div class="container-sm border" style="padding: 5px; width: clamp(240px, 300px, 300px)">
+
+    <form [formGroup]="transferirPesos">
+        <div class="row align-items-center" style="padding-top: 5px">
+            <div class="form-group col-auto" style="padding-right: 5px; min-width: 75px">
+                <label style="padding-left: 4px">Cuenta:</label>
+            </div>
+            <div class="col" style="padding-left: 0px">
+                <input type="text" class="form-control" formControlName="cuentaATransferir">
+            </div>
+        </div>
+        <span *ngIf="cuentaATransferir && cuentaATransferir.invalid && cuentaATransferir.touched"
+        style="color: rgb(136, 17, 37); font-style: italic; padding-left: 75px; font-size: smaller;">Cuenta necesaria</span>
+
+        <div class="row align-items-center" style="padding-top: 5px;">
+            <div class="col-auto" style="padding-right: 5px; min-width: 75px">
+                <label style="padding-left: 4px">Monto:</label>
+            </div>
+            <div class="col" style="padding-left: 0px">
+                <input type="number" class="form-control" formControlName="montoATransferir">
+            </div>
+        </div>
+        <span *ngIf="montoATransferir && montoATransferir.invalid && montoATransferir.touched" 
+        style="color: rgb(136, 17, 37); font-style: italic; padding-left: 75px; font-size: smaller;">
+        Monto necesario</span>
+    
+        <div class="row" style="padding-top: 7px;">
+            <div class="col text-center">
+                <button [disabled]="transferirPesos.invalid" class="btn btn-success">Enviar</button>
+            </div>
+        </div>
+    </form>
+
+
+</div>

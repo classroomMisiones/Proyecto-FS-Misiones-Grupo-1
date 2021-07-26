@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './usuario/login/login.component';
@@ -10,6 +11,12 @@ import { ModuloPesosComponent } from './Inicio/modulo-pesos/modulo-pesos.compone
 import { NavbarComponent } from './navbarFooter/navbar/navbar.component';
 import { FooterComponent } from './navbarFooter/footer/footer.component';
 
+import { PerfilUsuarioComponent } from './usuario/perfil-usuario/perfil-usuario.component';
+
+import { TransferirPesosComponent } from './modulo-pesos/transferir-pesos/transferir-pesos.component';
+import { UltimasTransferenciasPesosComponent } from './modulo-pesos/ultimas-transferencias-pesos/ultimas-transferencias-pesos.component';
+
+
 
 @NgModule({
   declarations: [
@@ -19,10 +26,15 @@ import { FooterComponent } from './navbarFooter/footer/footer.component';
     VenderCriptoMonedaComponent,
     ModuloPesosComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    PerfilUsuarioComponent,
+    TransferirPesosComponent,
+    UltimasTransferenciasPesosComponent
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
     
   ],
   providers: [],
