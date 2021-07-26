@@ -8,8 +8,12 @@ import { RegistrationFormComponent } from './usuario/registration-form/registrat
 
 import { VenderCriptoMonedaComponent } from './CriptoMoneda/vender-cripto-moneda/vender-cripto-moneda.component';
 import { ModuloPesosComponent } from './Inicio/modulo-pesos/modulo-pesos.component';
+
+import { PerfilUsuarioComponent } from './usuario/perfil-usuario/perfil-usuario.component';
+
 import { TransferirPesosComponent } from './modulo-pesos/transferir-pesos/transferir-pesos.component';
 import { UltimasTransferenciasPesosComponent } from './modulo-pesos/ultimas-transferencias-pesos/ultimas-transferencias-pesos.component';
+
 
 
 @NgModule({
@@ -19,8 +23,10 @@ import { UltimasTransferenciasPesosComponent } from './modulo-pesos/ultimas-tran
     LoginComponent,
     VenderCriptoMonedaComponent,
     ModuloPesosComponent,
+    PerfilUsuarioComponent,
     TransferirPesosComponent,
     UltimasTransferenciasPesosComponent
+
   ],
   imports: [
     BrowserModule,
