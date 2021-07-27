@@ -12,6 +12,7 @@ export class NavbarComponent implements OnInit {
  @Input() cripto: boolean = false
  @Input() misaldo: boolean = false
  @Input() usuario: boolean = false
+ @Input() salir: boolean = true
 
   constructor() { }
 

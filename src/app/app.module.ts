@@ -28,7 +28,8 @@ const appRoutes: Routes = [
   { path: 'usuario', component: PerfilUsuarioComponent },
   { path: 'transferirpesos', component: TransferirPesosComponent },
   { path: 'comprarcripto', component: CompraCriptoComponent },
-  { path: 'vendercripto', component: VenderCriptoMonedaComponent }
+  { path: 'vendercripto', component: VenderCriptoMonedaComponent },
+  // { path: 'salir', component: LoginComponent }
 ];
 
 @NgModule({
