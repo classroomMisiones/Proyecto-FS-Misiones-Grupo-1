@@ -1,23 +1,12 @@
-
-
-<app-navbar></app-navbar>
+<app-navbar 
+[registro]="registro" 
+[inicio]="inicio"
+[cripto]="cripto"
+[misaldo]="misaldo"
+[usuario]="usuario"></app-navbar>
 <!--Navbar dejar primero-->
 
-<!-- <app-registration-form></app-registration-form> -->
-<app-login></app-login>
-<!-- <app-vender-cripto-moneda></app-vender-cripto-moneda> -->
-<!--<app-inicio-cripto></app-inicio-cripto>-->
-<!--app-compra-cripto></app-compra-cripto>-->
-<!-- <app-modulo-pesos></app-modulo-pesos> -->
-<!-- Modulos Registro Usuario y modulo Login -->
-<!--<app-registration-form></app-registration-form>-->
-<!-- <app-login></app-login> -->
-<!-- <app-perfil-usuario></app-perfil-usuario> -->
-<!-- <app-vender-cripto-moneda></app-vender-cripto-moneda> -->
-<!-- <app-modulo-pesos></app-modulo-pesos> -->
-<!-- <app-transferir-pesos></app-transferir-pesos>
-<br>
-<app-ultimas-transferencias-pesos></app-ultimas-transferencias-pesos> -->
+<router-outlet></router-outlet>
 
 <!--Footer dejar al final-->
 <app-footer></app-footer>

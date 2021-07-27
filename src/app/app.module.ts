@@ -17,8 +17,19 @@ import { TransferirPesosComponent } from './modulo-pesos/transferir-pesos/transf
 import { UltimasTransferenciasPesosComponent } from './modulo-pesos/ultimas-transferencias-pesos/ultimas-transferencias-pesos.component';
 import { InicioCriptoComponent } from './inicioCriptomeda/inicio-cripto/inicio-cripto.component';
 import { CompraCriptoComponent } from './compra-cripto/compra-cripto.component';
+import { RouterModule, Routes } from '@angular/router';
 
 
+const appRoutes: Routes = [
+  { path: '', component: LoginComponent  },
+  { path: 'registro', component: RegistrationFormComponent },
+  { path: 'modulopesos', component: ModuloPesosComponent },
+  { path: 'modulocripto', component: InicioCriptoComponent },
+  { path: 'usuario', component: PerfilUsuarioComponent },
+  { path: 'transferirpesos', component: TransferirPesosComponent },
+  { path: 'comprarcripto', component: CompraCriptoComponent },
+  { path: 'vendercripto', component: VenderCriptoMonedaComponent }
+];
 
 @NgModule({
   declarations: [
@@ -38,8 +49,8 @@ import { CompraCriptoComponent } from './compra-cripto/compra-cripto.component';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
