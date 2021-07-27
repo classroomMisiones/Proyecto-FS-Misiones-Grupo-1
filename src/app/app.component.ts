@@ -16,6 +16,7 @@ export class AppComponent implements OnInit{
   cripto = false
   misaldo = false
   usuario = false
+  salir = false
   rutaActual = ""
 
   constructor(private router: Router) {}
@@ -35,7 +36,9 @@ export class AppComponent implements OnInit{
         this.misaldo = false
         this.cripto = false
         this.usuario = false
+        this.salir = false
         this.inicio = true
+        
         break;
       case '/':
         this.inicio = true
@@ -43,6 +46,7 @@ export class AppComponent implements OnInit{
         this.cripto = false
         this.misaldo = false
         this.usuario = false
+        this.salir =false
         break;
       case '/modulopesos':
         this.inicio = false
@@ -50,6 +54,7 @@ export class AppComponent implements OnInit{
         this.cripto = true
         this.usuario = true
         this.misaldo = true
+        this.salir = true
     }
   }
 }
