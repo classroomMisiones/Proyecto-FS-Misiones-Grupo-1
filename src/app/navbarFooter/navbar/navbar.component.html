@@ -1,32 +1,34 @@
-<div class="container-fluid">
-  <nav class=" gradient-custom navbar-expand-sm  navbar-expand-lg navbar navbar-light justify-content-star p2 mb-4" style="background-color: #ccffff;">
-    <div class="container-fluid ">
-      <div class=" min-vw-auto">
-        <a *ngIf="misaldo"  routerLink="modulopesos">
-        <img class="navbar-brand ancho_logo" src="../../../assets/logoMyMoney_png.png" alt="">
-        </a>
-        <a *ngIf="inicio"  routerLink="/">
-        <img class="navbar-brand ancho_logo" src="../../../assets/logoMyMoney_png.png" alt="">
-        </a>
-      </div>
-        
-      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-        <div class="contenedor d-flex aling-items-start">
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active fs-5 " *ngIf="inicio" aria-current="page" routerLink="/">Inicio</a>
-              <a class="nav-link fs-5" *ngIf="misaldo" routerLink="modulopesos">MiSaldo</a>  
-              <a class="nav-link fs-5" *ngIf="registro" routerLink="registro">Registrarse</a>
-              <a class="nav-link fs-5" *ngIf="cripto" routerLink="modulocripto">Criptomonedas</a>
-              <a class="nav-link fs-5" *ngIf="usuario" routerLink="usuario">Usuario</a>
-              <a class="nav-link fs-5" *ngIf="salir" routerLink="/">Salir</a>        
-            </div>
+<header>
+  <div class="container-fluid">
+    <nav class=" gradient-custom navbar-expand-sm  navbar-expand-lg navbar navbar-light justify-content-star p2 mb-4" style="background-color: #ccffff;">
+      <div class="container-fluid ">
+        <div class=" min-vw-auto">
+          <a *ngIf="misaldo"  routerLink="modulopesos">
+          <img class="navbar-brand ancho_logo" src="../../../assets/logoMyMoney_png.png" alt="">
+          </a>
+          <a *ngIf="inicio"  routerLink="/">
+          <img class="navbar-brand ancho_logo" src="../../../assets/logoMyMoney_png.png" alt="">
+          </a>
         </div>
-        
+          
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+          <div class="contenedor d-flex aling-items-start">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active fs-5 " *ngIf="inicio" aria-current="page" routerLink="/">Inicio</a>
+                <a class="nav-link fs-5" *ngIf="misaldo" routerLink="modulopesos">MiSaldo</a>  
+                <a class="nav-link fs-5" *ngIf="registro" routerLink="registro">Registrarse</a>
+                <a class="nav-link fs-5" *ngIf="cripto" routerLink="modulocripto">Criptomonedas</a>
+                <a class="nav-link fs-5" *ngIf="usuario" routerLink="usuario">Usuario</a>
+                <a class="nav-link fs-5" *ngIf="salir" routerLink="/">Salir</a>        
+              </div>
+          </div>
+          
+        </div>
       </div>
-    </div>
-  </nav>
-</div>
+    </nav>
+  </div>
+</header>
