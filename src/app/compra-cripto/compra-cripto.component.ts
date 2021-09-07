@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-compra-cripto',
   templateUrl: './compra-cripto.component.html',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompraCriptoComponent implements OnInit {
 
+  comprarCripto= new FormGroup({
+    //cuentaATransferir: new FormControl('', [Validators.required, Validators.minLength(11)]),
+    montoCripto: new FormControl('', [Validators.required])
+  })
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  get montoCripto() {
+    return this.comprarCripto.get('montoCripto');
   }
 
 }

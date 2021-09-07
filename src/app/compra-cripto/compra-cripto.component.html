@@ -5,15 +5,19 @@
             <h3>Comercializar CriptoMoneda</h3>
         </div>
         <div class="container border" >
-            <form action="" class="row p-3">
+            <form action="" class="row p-3" [formGroup]="comprarCripto">
 
                 <div class="form-group row mb-3 ">
                     <label for="monto" class="col-3 col-form-label " >Monto</label>
                     <div class="col-8">
-                        <input class="form-control " type="text" name="monto" id="monto" placeholder="Ingrese un monto" required pattern="[0-9]{2,9}" style="margin: 5%;">
+                        <input class="form-control " type="text" name="monto" id="monto" placeholder="Ingrese un monto" formControlName="montoCripto" style="margin: 5%;">
                     </div>
                     
                 </div>
+
+                <span *ngIf="montoCripto && montoCripto.invalid && montoCripto.touched" 
+                style="color: rgb(129, 122, 123); font-style: italic; padding-left: 75px; font-size: smaller;">
+                Monto necesario</span>
                 
                 <div class="form-group row mb-3">
                     <label class="col-3 col-form-label" for="moneda">Moneda</label>
