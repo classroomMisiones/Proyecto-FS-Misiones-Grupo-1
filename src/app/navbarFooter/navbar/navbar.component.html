@@ -1,7 +1,7 @@
-<header>
-  <div class="container-fluid">
-    <nav class=" gradient-custom navbar-expand-sm  navbar-expand-lg navbar navbar-light justify-content-star p2 mb-4" style="background-color: #ccffff;">
-      <div class="container-fluid ">
+<header class="cabecera"> 
+    <nav class=" gradient-custom navbar-expand-sm  navbar-expand-lg navbar navbar-light justify-content-star p2 mb-4">
+      <div class="container-fluid  contenedor">
+        
         <div class=" min-vw-auto">
           <a *ngIf="misaldo"  routerLink="modulopesos">
           <img class="navbar-brand ancho_logo" src="../../../assets/logoMyMoney_png.png" alt="">
@@ -25,10 +25,9 @@
                 <a class="nav-link fs-5" *ngIf="usuario" routerLink="usuario">Usuario</a>
                 <a class="nav-link fs-5" *ngIf="salir" routerLink="/">Salir</a>        
               </div>
+            </div>
           </div>
-          
-        </div>
+
       </div>
-    </nav>
-  </div>
+    </nav> 
 </header>

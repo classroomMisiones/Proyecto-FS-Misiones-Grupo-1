@@ -1,16 +1,15 @@
 
 footer{
-    margin-top: 150px;
-    padding-top: 15px;
-    display: flex;
-    justify-content: space-between;
+    margin-top: 250px;
 }
-.columna{
-    padding-left: 15px;
-    padding-right: 15px;
+
+.row{
+padding: 25px;
+
 }
-.columna-25{
-    width: 33%;
+
+h3{
+    color: #276678;
 }
 
 ul{
@@ -23,6 +22,11 @@ ul li{
     margin: 10px;
 }
 
+ul li a{
+    color: #276678;
+    text-decoration: none;    
+}
+
 .redes{
     font-size: 30px;
     display: flex;
@@ -31,6 +35,7 @@ ul li{
 }
 .redes a{
     margin: 0 7.5px;
+    color: #276678;
 }
 
 
@@ -43,10 +48,6 @@ ul li{
         .columna-mobile-100{
             width: 100%;
         }
-
-        
-  
-  
   
  } /* //cierra @media  */
 
@@ -54,12 +55,12 @@ ul li{
 
 .gradient-custom {
    
-    background: #ccffff;
+    background: #D3E0EA;
   
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgba(255, 241, 235, 0.5), rgba(100, 199, 245, 0.5));
+    background: -webkit-linear-gradient(to right,  #D3E0EA, #F6F5F5);
   
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgba(255, 241, 235, 0.5), rgba(100, 199, 245, 0.5))
+    background: linear-gradient(to right, #D3E0EA, #F6F5F5)
 }
 

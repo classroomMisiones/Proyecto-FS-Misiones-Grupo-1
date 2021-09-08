@@ -1,18 +1,30 @@
 :root{
-    --dark:#16191c;
-    --dark-x:#1e2126;
-    --light:#ffffff;
+    --blue-xx:#276678;
+    --blue-x:#1687A7;
+    --light:#F6F5F5;
 }
 
 body{
     font-family: 'Roboto', sans-serif;
     font-weight: 300; 
-    color:var(--light);
+    background-color:#F6F5F5;
+    padding-bottom: 15px;
 }
 
-/*.bg-light {background-color: var(--dark) !important;}*/
-.bg-dark-x{background-color: var(--dark-x);}
- 
+h1{
+    color: #1687A7;
+}
+
+a{
+    color: #1687A7;
+    text-decoration:none ;
+}
+
+a:hover{
+    color: #276678;  
+    font-size: 16px;
+}
+
 .form-control, .btn {
     min-height: 3.125rem;
     line-height:inherit;
@@ -20,6 +32,13 @@ body{
     border-radius: 10px;
    
 }
+
+.btn{
+    background-color: #276678;
+    color: #F6F5F5 ;
+    font-size: 2rem;
+}
+
 .img-1 {
     background-size: cover;
     background-position: center;
@@ -31,25 +50,7 @@ body{
     box-shadow: 0 8px 6px -6px #999;
 }
 
-.gradiente {
-    background: #5ee7df;
 
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to top, rgba(94, 231, 223, 0.7), rgba(180, 144, 202, 0.7));
-  
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to top, rgba(94, 231, 223, 0.7), rgba(255, 255, 255, 0.7))
-  }
-  .gradiente-btn {
-  /* fallback for old browsers */
-  background: #48c6ef;
-
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to top, rgba(72, 198, 239, 0.7), rgba(111, 134, 214, 0.7));
-
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to top, rgba(72, 198, 239, 0.7), rgba(111, 134, 214, 0.7))
-}
 
 
 

@@ -1,26 +1,42 @@
 header{
-    padding:15px 0;
-    position: fixed;
+    padding:15px 0;   
     top:0;
     width: 100%;
-    z-index: 2;
     margin-bottom: 150px;
 }
+
+header .contenedor .navbar-nav a{
+    color: #1687A7;
+    text-decoration:none ;
+}
+
+header .contenedor .navbar-nav a:hover{
+    color: #276678;  
+    font-size: 25px;
+}
+
+.cabecera{
+    position: relative;
+}
+
+.container-fluid{
+    display: flex;    
+}
+
 .navbar {
-    
     -webkit-box-shadow: 0 8px 6px -6px #999;
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 8px 6px -6px #999;
 }
 .gradient-custom {
    
-    background: #ccffff;
+    background: #D3E0EA;
   
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgba(255, 241, 235, 0.5), rgba(100, 199, 245, 0.5));
+    background: -webkit-linear-gradient(to right,  #D3E0EA, #F6F5F5);
   
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgba(255, 241, 235, 0.5), rgba(100, 199, 245, 0.5))
+    background: linear-gradient(to right, #D3E0EA, #F6F5F5)
 }
 
 .ancho_logo{
