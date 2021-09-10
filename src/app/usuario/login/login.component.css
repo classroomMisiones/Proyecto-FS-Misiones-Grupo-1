@@ -14,8 +14,11 @@ body{
 .form-control, .btn {
     min-height: 3.125rem;
     line-height:inherit;
-    border-radius: 10px;
-   
+    border-radius: 10px;   
+}
+
+.row {
+    height: 450px;
 }
 
 .btn{
@@ -45,7 +48,7 @@ a:hover{
   
 }
 .carousel-inner{
-    height: 400px;
+    height: 500px;
     }
 
 .box-sombra {

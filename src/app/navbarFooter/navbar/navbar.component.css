@@ -3,25 +3,25 @@ header{
     top:0;
     width: 100%;
     margin-top: -14px;
-    margin-bottom: -35px;
+    margin-bottom: -5px;
 }
 
-header .contenedor .navbar-nav a{
+
+
+header .navbar-nav a{
     color: #1687A7;
     text-decoration:none ;
 }
 
-header .contenedor .navbar-nav a:hover{
+header  .navbar-nav a:hover{
     color: #276678;  
     font-size: 25px;
 }
 
-.cabecera{
-    position: relative;
-}
+
 
 .container-fluid{
-    display: flex;    
+    display: flex; 
 }
 
 .navbar {
