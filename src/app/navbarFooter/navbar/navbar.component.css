@@ -14,7 +14,8 @@ header .navbar-nav a{
 }
 
 header  .navbar-nav a:hover{
-    color: #276678;  
+    background: #ebf5b1; 
+    border:1px solid transparent;
     font-size: 25px;
 }
 
