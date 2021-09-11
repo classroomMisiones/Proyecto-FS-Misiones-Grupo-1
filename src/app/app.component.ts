@@ -11,6 +11,7 @@ import { NavigationStart, Router } from '@angular/router';
 export class AppComponent implements OnInit{
   title = 'mymoney';
 
+  /*↓Estos bools controlan la visibilidad de elementos de la navbar↓*/
   registro = true
   inicio = true
   cripto = false
@@ -22,6 +23,7 @@ export class AppComponent implements OnInit{
   constructor(private router: Router) {}
 
   ngOnInit() {
+    /*↓Escuchamos los eventos que dispara el router↓*/
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
         this.determinarEstado(event.url)
@@ -29,16 +31,16 @@ export class AppComponent implements OnInit{
     })
   }
 
+  /* ↓En función a esos eventos, encendemos o apagamos partes de la navbar↓ */
   determinarEstado(urlActual: string) {
     switch (urlActual) {
       case '/registro':
-        this.registro = false
+        this.registro = true
         this.misaldo = false
         this.cripto = false
         this.usuario = false
         this.salir = false
         this.inicio = true
-        
         break;
       case '/':
         this.inicio = true

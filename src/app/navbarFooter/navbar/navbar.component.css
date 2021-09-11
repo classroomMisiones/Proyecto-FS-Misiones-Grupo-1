@@ -6,8 +6,6 @@ header{
     margin-bottom: -5px;
 }
 
-
-
 header .navbar-nav a{
     color: #1687A7;
     text-decoration:none ;
@@ -18,10 +16,12 @@ header  .navbar-nav a:hover{
     font-size: 25px;
 }
 
-
-
 .container-fluid{
     display: flex; 
+}
+
+.nav-link{
+    white-space: nowrap;
 }
 
 .navbar {
@@ -30,16 +30,57 @@ header  .navbar-nav a:hover{
     box-shadow: 0 8px 6px -6px #999;
 }
 .gradient-custom {
-   
     background: #D3E0EA;
-  
     /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(to right,  #D3E0EA, #F6F5F5);
-  
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, #D3E0EA, #F6F5F5)
 }
 
 .ancho_logo{
     width: 150px;
+}
+
+/*↓Esto es el subrayado de los elementos de la navbar↓*/
+ul.breadcrumb li a::after{
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: black;
+    transition: 400ms;
+}
+
+ul.breadcrumb li a:hover::after{
+    width: 100%;
+}
+
+ul.breadcrumb li a::before{
+    content: '';
+    width: 0px;
+    height: 1.6px;
+    display: block;
+    background: black;
+    /*Floating right es lo que hace que la otra línea empiece inversamente*/
+    float: right;
+    transition: 400ms;
+}
+
+ul.breadcrumb li a:hover::before{
+    width: 99.5%;
+}
+/*↑Genera una línea de 2px de alto, le da un ancho de 0, pero del 100% cuando el mouse pasa por encima,
+con una transición de 400ms↑*/
+
+/*Este es el subrayado que se aplica a los links activos usando RouterLinkActive de Angular (con un 
+match exacto de toda la ruta)↓↓*/
+ul.breadcrumb li a.link-activo::after{
+    content: '';
+    margin-left: 10%;
+    margin-top: 1px;
+    width: 80%;
+    height: 4px;
+    display: block;
+    background: black;
+    transition: 600ms;
 }

@@ -1,33 +1,48 @@
 <header class=""> 
     <nav class="navbar navbar-expand-sm navbar-expand-lg navbar-light gradient-custom ">
       <div class="container-fluid  ">
-        
         <div class=" min-vw-auto ">
           <a *ngIf="misaldo"  routerLink="modulopesos">
           <img class="ancho_logo" src="../../../assets/logoMyMoney_png.png" alt="">
           </a>
-          <a *ngIf="inicio"  routerLink="/">
+          <a *ngIf="inicio" routerLink="/">
           <img class="ancho_logo" src="../../../assets/logoMyMoney_png.png" alt="">
           </a>
         </div>
-          
-        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <!--- Este botón ↓↓ aparece cuando se achica la pantalla-->
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-  
+        <!--             ↑↑-->
           <div class="">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-link active fs-5 " *ngIf="inicio" aria-current="page" routerLink="/">Inicio</a>
-                <a class="nav-link fs-5" *ngIf="misaldo" routerLink="modulopesos">MiSaldo</a>  
-                <a class="nav-link fs-5" *ngIf="registro" routerLink="registro">Registrarse</a>
-                <a class="nav-link fs-5" *ngIf="cripto" routerLink="modulocripto">Criptomonedas</a>
-                <a class="nav-link fs-5" *ngIf="usuario" routerLink="usuario">Usuario</a>
-                <a class="nav-link fs-5" *ngIf="salir" routerLink="/">Salir</a>        
+                <ul class="breadcrumb">
+
+                  <li><a class="nav-link fs-5" *ngIf="inicio" routerLink="/" 
+                    routerLinkActive="link-activo" [routerLinkActiveOptions]="
+                    {exact: true}">Inicio</a></li>
+
+                  <li><a class="nav-link fs-5" *ngIf="misaldo" routerLink="modulopesos" 
+                    routerLinkActive="link-activo"> Mi Saldo </a></li>
+
+                  <li><a class="nav-link fs-5" *ngIf="registro" routerLink="registro" 
+                    routerLinkActive="link-activo" [routerLinkActiveOptions]="
+                    {exact: true}">Registrarse</a></li>
+
+                  <li><a class="nav-link fs-5" *ngIf="cripto" routerLink="modulocripto" 
+                    routerLinkActive="link-activo">Criptomonedas</a></li>
+
+                  <li><a class="nav-link fs-5" *ngIf="usuario" routerLink="usuario" 
+                    routerLinkActive="link-activo">Usuario</a></li>
+
+                  <li><a class="nav-link fs-5" *ngIf="salir" routerLink="/">Salir</a></li>   
+
+                </ul>   
               </div>
             </div>
           </div>
-
       </div>
     </nav> 
 </header>
