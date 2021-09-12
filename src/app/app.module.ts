@@ -14,7 +14,6 @@ import { FooterComponent } from './navbarFooter/footer/footer.component';
 import { PerfilUsuarioComponent } from './usuario/perfil-usuario/perfil-usuario.component';
 
 import { TransferirPesosComponent } from './modulo-pesos/transferir-pesos/transferir-pesos.component';
-import { UltimasTransferenciasPesosComponent } from './modulo-pesos/ultimas-transferencias-pesos/ultimas-transferencias-pesos.component';
 import { InicioCriptoComponent } from './inicioCriptomeda/inicio-cripto/inicio-cripto.component';
 import { CompraCriptoComponent } from './compra-cripto/compra-cripto.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -43,7 +42,6 @@ const appRoutes: Routes = [
     FooterComponent,
     PerfilUsuarioComponent,
     TransferirPesosComponent,
-    UltimasTransferenciasPesosComponent,
     InicioCriptoComponent,
     CompraCriptoComponent
 
