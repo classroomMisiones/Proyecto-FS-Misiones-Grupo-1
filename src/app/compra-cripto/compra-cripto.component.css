@@ -9,3 +9,37 @@ input.ng-invalid {
 input.ng-valid {
     border-left: 5px solid green;
 }
+
+.box-sombra {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+  }
+  
+  .gradiente {
+    background: linear-gradient(to top, #276678, rgba(239, 239, 240, 0.7));
+  }
+  
+  .gradiente-btn {
+    background: linear-gradient(to top, rgba(244, 249, 250, 0.7), #7ea0aa);
+    margin-right: 5px;
+  }
+  
+  .título {
+    margin-bottom: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+  }
+  
+  .btn {
+    color: black;
+  }
+
+  .mt-2{
+      text-align: center;
+  }
+
+  .nowrap {
+      white-space: nowrap;
+  }
