@@ -1,40 +1,56 @@
-<div class="row col-xs-12">
-    <label style="padding-bottom: 3px;">Transferir Dinero</label>
-</div>
-
-<div class="container-sm border" style="padding: 5px; width: clamp(240px, 300px, 300px)">
-
-    <form [formGroup]="transferirPesos">
-        <div class="row align-items-center" style="padding-top: 5px">
-            <div class="form-group col-auto" style="padding-right: 5px; min-width: 75px">
-                <label style="padding-left: 4px">Cuenta:</label>
+<section class="  container col-12  overflow-hidden" style="min-width: 425px; ">
+    <div class="row row-cols-2">
+        <div class=" col-12 col-lg-6 mb-3">
+            <div class="gradiente form-control bg-primary text-center d-flex align-items-center justify-content-center título">
+                    <div class="pl-2"></div>
+                    <h3>Transferir Dinero</h3>
             </div>
-            <div class="col" style="padding-left: 0px">
-                <input type="text" class="form-control" formControlName="cuentaATransferir">
+        <!--Acá va la transferencia-->
+        <div class="box-sombra border border-dark form-control p-4" style="background-color: #b1b3b3;" 
+        style="padding: 5px;">
+
+            <form [formGroup]="transferirPesos">
+                <div class="row align-items-center" style="padding-top: 5px">
+                    <div class="form-group col-auto" style="padding-right: 5px; min-width: 75px">
+                        <label style="padding-left: 4px">
+                            Cuenta:</label>
+                    </div>
+                    <div class="col" style="padding-left: 0px">
+                        <input type="text" class="form-control" formControlName="cuentaATransferir">
+                    </div>
+                </div>
+
+                <span *ngIf="cuentaATransferir && cuentaATransferir.invalid && cuentaATransferir.touched"
+                style="color: rgb(136, 17, 37); font-style: italic; padding-left: 75px; font-size: smaller;">
+                Cuenta necesaria</span>
+
+                <div class="row align-items-center" style="padding-top: 5px;">
+                    <div class="col-auto" style="padding-right: 5px; min-width: 75px">
+                        <label style="padding-left: 4px">
+                            Monto:</label>
+                    </div>
+                    <div class="col" style="padding-left: 0px">
+                        <input type="number" class="form-control" formControlName="montoATransferir">
+                    </div>
+                </div>
+
+                <span *ngIf="montoATransferir && montoATransferir.invalid && montoATransferir.touched" 
+                style="color: rgb(136, 17, 37); font-style: italic; padding-left: 75px; font-size: smaller;">
+                Monto necesario</span>
+
+            </form>
+        </div>
+        <!--Hasta acá-->
+            <div class="mt-2">
+                <button class=" gradiente-btn btn btn-primary rounded-pill box-sombra" [routerLink]="['/transferirpesos']">
+                    Realizar Transferencia</button>
+            </div>
+            
+        </div>
+        <div class="mb-3 col-12 col-lg-6">
+            <div class="gradiente form-control bg-primary text-center título">
+                    <h3>Últimas Transferencias</h3>
             </div>
         </div>
-        <span *ngIf="cuentaATransferir && cuentaATransferir.invalid && cuentaATransferir.touched"
-        style="color: rgb(136, 17, 37); font-style: italic; padding-left: 75px; font-size: smaller;">Cuenta necesaria</span>
-
-        <div class="row align-items-center" style="padding-top: 5px;">
-            <div class="col-auto" style="padding-right: 5px; min-width: 75px">
-                <label style="padding-left: 4px">Monto:</label>
-            </div>
-            <div class="col" style="padding-left: 0px">
-                <input type="number" class="form-control" formControlName="montoATransferir">
-            </div>
-        </div>
-        <span *ngIf="montoATransferir && montoATransferir.invalid && montoATransferir.touched" 
-        style="color: rgb(136, 17, 37); font-style: italic; padding-left: 75px; font-size: smaller;">
-        Monto necesario</span>
-    
-        <div class="row" style="padding-top: 7px;">
-            <div class="col text-center">
-                <button [disabled]="transferirPesos.invalid" class="btn btn-success">Enviar</button>
-            </div>
-        </div>
-    </form>
-
-</div>
-
-<app-ultimas-transferencias-pesos></app-ultimas-transferencias-pesos>
+    </div>
+</section>

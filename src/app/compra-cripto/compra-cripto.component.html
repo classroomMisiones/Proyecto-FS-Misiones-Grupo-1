@@ -1,64 +1,53 @@
-<section class="col-8 container overflow-hidden" style="min-width: 425px;">
-
-    <div class="col-12  col-lg-6 col-xl-6 mb-3 mt-3">
-        <div class="text-center">
-            <h3>Comercializar CriptoMoneda</h3>
-        </div>
-        <div class="container border" >
-            <form action="" class="row p-3" [formGroup]="comprarCripto">
-
-                <div class="form-group row mb-3 ">
-                    <label for="monto" class="col-3 col-form-label " >Monto</label>
-                    <div class="col-8">
-                        <input class="form-control " type="text" name="monto" id="monto" placeholder="Ingrese un monto" formControlName="montoCripto" style="margin: 5%;">
-                    </div>
-                    
-                </div>
-
-                <span *ngIf="montoCripto && montoCripto.invalid && montoCripto.touched" 
-                style="color: rgb(129, 122, 123); font-style: italic; padding-left: 75px; font-size: smaller;">
-                Monto necesario</span>
+<section class="  container col-12  overflow-hidden" style="min-width: 425px; ">
+    <div class="row row-cols-2">
+        <div class=" col-12 col-lg-6 mb-3">
+            <div class="gradiente form-control bg-primary text-center d-flex align-items-center justify-content-center título">
+                    <div class="pl-2"></div>
+                    <h3>Comprar Criptomoneda</h3>
+            </div>
+        <!--Acá va la transferencia-->
+        <div class="box-sombra border border-dark form-control">
+            <form action="" class="row p-2" [formGroup]="comprarCripto">
                 
                 <div class="form-group row mb-3">
                     <label class="col-3 col-form-label" for="moneda">Moneda</label>
                     <div   class="col-8">
-                        <select name="moneda" id="moneda" class="form-select" required >
+                        <select name="moneda" id="moneda" class="form-select" required>
                             <option selected>CriptoMoneda...</option>
                             <option >Bitcoin</option>
                         </select>
                     </div>
+                </div>
+
+                <div class="form-group row mb-3 ">
+                    <label for="monto" class="col-3 col-form-label ">Monto</label>
+                    <div class="col-8">
+                        <input class="form-control " type="text" name="monto" id="monto" placeholder="Monto a comprar" formControlName="montoCripto" >
+                    </div>
                     
+                    <span *ngIf="montoCripto && montoCripto.invalid && montoCripto.touched" 
+                style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller; padding-left: 33%;">
+                Monto necesario</span>
                 </div>
                 
                 <div class="form-group row mb-3">
-                    <label class="col-3 col-form-label" for="Total" >Total</label>
+                    <label class="col-3 col-form-label nowrap" for="Total">Total $</label>
                     <div class="col-8">
-                        <input class="form-control" type="text" name="total" readonly > 
+                        <input class="form-control" type="text" name="total" readonly> 
                     </div>   
                 </div>
-                
-                <input class="col-3 btn btn-primary ml-3" type="submit" title="comprar" value="Comprar" >
-                
             </form>
         </div>
-        
-    </div>
-    <div class="col-12 col-lg-6 ">
-        <div class=" text-center">
-            <h3>Ultimas Compras</h3>
-        </div >
-
-        <div class="border p-3"  >
-            <div class="form-group row mb-3 mb-3 d-flex justify-content-around">
-                <img class="col-2" src="" alt="Bitcoin">
-                <label class="col-6"for="">Compraste Bitcon por</label>
-                <label class="col-1" for="">$1000</label>
+        <!--Hasta acá-->
+            <div class="mt-2">
+                <button class=" gradiente-btn btn btn-primary rounded-pill box-sombra">
+                    Comprar</button>
             </div>
-
-            <div class="form-group row mb-3 d-flex justify-content-around">
-                <img class="col-2" src="" alt="Bitcoin">
-                <label class="col-6" for="">Compraste Bitcon por</label>
-                <label class="col-1" for="">$3000</label>
+            
+        </div>
+        <div class="mb-3 col-12 col-lg-6">
+            <div class="gradiente form-control bg-primary text-center título">
+                    <h3>Últimas Transferencias</h3>
             </div>
         </div>
     </div>
