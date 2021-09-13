@@ -18,6 +18,11 @@ import { InicioCriptoComponent } from './inicioCriptomeda/inicio-cripto/inicio-c
 import { CompraCriptoComponent } from './compra-cripto/compra-cripto.component';
 import { RouterModule, Routes } from '@angular/router';
 
+import { QuienesSomosComponent } from './otras/quienes-somos/quienes-somos.component';
+import { PreguntasFrecuentesComponent } from './otras/preguntas-frecuentes/preguntas-frecuentes.component';
+import { LegalesComponent } from './otras/legales/legales.component';
+import { ContactoComponent } from './otras/contacto/contacto.component';
+
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent  },
@@ -43,7 +48,11 @@ const appRoutes: Routes = [
     PerfilUsuarioComponent,
     TransferirPesosComponent,
     InicioCriptoComponent,
-    CompraCriptoComponent
+    CompraCriptoComponent,
+    ContactoComponent,
+    LegalesComponent,
+    PreguntasFrecuentesComponent,
+    QuienesSomosComponent
 
   ],
   imports: [

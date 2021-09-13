@@ -1,0 +1,124 @@
+:root{ /*Paleta de Colores Elegida*/
+    --blue-xxx:#276678;
+    --blue-xx:#1687A7;
+    --blue-x: #D3E0EA;
+    --light:#F6F5F5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+ }
+ 
+.grid-container {
+    margin-bottom: 20px;
+}
+
+.aside {
+    margin-bottom: 15px;
+}
+
+
+
+.flex-container {
+    height: auto;
+    min-height: 150px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
+.flex-container p {
+  color: #1687A7 ;
+}
+
+.title {   
+    font-size: 28px; 
+    color:#276678;
+    animation-duration: 15s;
+    animation-name: aparecer;
+    animation-iteration-count: 2;    
+}
+
+.title{
+    text-align: center;
+    margin-block-end: 10px;
+}
+
+
+.navbar_aside ul li {
+    list-style: none;
+    text-decoration: none;
+    margin-left: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.navbar_aside ul li a {    
+    text-decoration: none;
+    color: #1687A7;    
+}
+
+/*GRID AREA*/
+.aside {
+    grid-area: aside;    
+ }
+ 
+.encabezado {
+    grid-area: encabezado;   
+}
+ 
+.sec1 {
+    grid-area: sec1;
+}
+
+.sec2 {
+    grid-area: sec2;
+}
+
+.sec3 {
+    grid-area: sec3;
+}
+
+.final {
+    grid-area: final;
+}
+ 
+.grid-container {
+    display: grid;
+    gap: 10px;   
+    grid-template: 
+        "encabezado  encabezado  encabezado encabezado" auto
+        "aside        sec1        sec2      sec3"       auto
+         "aside       final      final     final"       150px /
+         150px        auto        auto     auto;         
+}
+
+ /*mas de 700 px pasa a modo tablet*/
+ @media  (max-width: 700px) { 
+    .grid-container{
+        grid-template: 
+    "aside "     auto
+    "encabezado" auto
+    " sec1"      auto
+    " sec2"      auto
+    " sec3"      auto
+    " final"     auto
+ }
+
+ .menu_aside {
+    display: flex;
+}
+
+.navbar_aside ul li a {    
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 0;
+    flex-wrap: wrap;    
+}
+
+}/* Cierro media query de 700px*/
