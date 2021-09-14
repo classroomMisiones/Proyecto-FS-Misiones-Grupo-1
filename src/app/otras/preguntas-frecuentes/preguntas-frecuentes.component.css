@@ -4,13 +4,13 @@
  }
  
 .grid-container {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .flex-container {
     height: auto;
     min-height: 150px;
-    padding: 10px;
+    padding: 5px;
     display: flex;
     flex-direction: row; 
     flex-wrap: wrap; 
@@ -24,7 +24,7 @@
 }
 
 .title {   
-    font-size: 28px; 
+    font-size: 25px; 
     color:#276678;
     animation-duration: 15s;
     animation-name: aparecer;
@@ -32,16 +32,17 @@
 }
 
 .title{
+    border: 2px double white;
     text-align: center;
-    margin-block-end: 10px;
+    margin-block-end: 5px;
 }
 
 .navbar_aside ul li {
     list-style: none;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 10px;
     padding-top: 7px;
-    padding-bottom: 7px;
+    padding-bottom: 0px;
 }
 
 .navbar_aside ul li a {    
@@ -52,7 +53,7 @@
 .aside {
     grid-area: aside;
     padding-top: 100px;
-    margin-bottom: 15px;    
+    margin-bottom: 10px;    
  }
  
  .preguntas {
@@ -61,10 +62,7 @@
  
  .grid-container {
     display: grid;
-    gap: 10px;   
-    grid-template: 
-    "aside  preguntas" auto /
-     150px  auto;    
+    gap: 5px;    
  }
  
  /*mas de 700 px pasa a modo tablet*/
@@ -86,3 +84,19 @@
         flex-wrap: wrap;    
     }
  }/* Cierro media query de 700px*/
+
+ .p__servicio p{
+    font-size: 17px;
+    color: rgba(3, 53, 94, 0.664);
+}
+
+.p__servicio p:hover {
+    background-color: rgb(246, 250, 196);
+    transition: 3s;
+}
+ 
+ .title:hover {
+    border: 2px double black;
+    transition: 3s;
+}
+

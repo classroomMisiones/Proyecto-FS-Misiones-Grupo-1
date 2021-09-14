@@ -41,7 +41,8 @@
     color:#276678;
     animation-duration: 15s;
     animation-name: aparecer;
-    animation-iteration-count: 2;    
+    animation-iteration-count: 2; 
+    border: 2px double white;   
 }
 
 .title{
@@ -92,10 +93,10 @@
     display: grid;
     gap: 10px;   
     grid-template: 
-        "encabezado  encabezado  encabezado encabezado" auto
+        "aside  encabezado  encabezado encabezado" auto
         "aside        sec1        sec2      sec3"       auto
          "aside       final      final     final"       150px /
-         150px        auto        auto     auto;         
+         0px        auto        auto     auto;         
 }
 
  /*mas de 700 px pasa a modo tablet*/
@@ -122,3 +123,18 @@
 }
 
 }/* Cierro media query de 700px*/
+
+.p__servicio p{
+    font-size: 17px;
+    color: rgba(3, 53, 94, 0.664);
+}
+
+.p__servicio p:hover {
+    background-color: rgb(246, 250, 196);
+    transition: 3s;
+}
+ 
+ .title:hover {
+    border: 2px double black;
+    transition: 3s;
+}

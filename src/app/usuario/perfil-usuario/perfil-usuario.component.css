@@ -1,0 +1,54 @@
+.container {
+    display: flex;    
+}
+
+.row {
+    padding: 5px;
+}
+
+.title {
+    color:#276678;
+    margin: 20 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color:#1687A7;
+}
+
+.fotoPerfil {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.campos {
+    color: gray;
+    font-size: 1.3rem;
+}
+
+.camposDatos {
+    color: black;
+    font-size: 1.2rem;
+}
+
+.button {
+    margin: 15px;
+    border: 2px solid #276678;
+    border-radius: 1rem;
+    background: #1687A7;
+    font-size: 1.3rem;
+    color: #D3E0EA;
+}
+
+.button:hover {
+    background: #D3E0EA;   
+    color:  #276678;
+}
+
+.botones {
+    display: flex;
+}

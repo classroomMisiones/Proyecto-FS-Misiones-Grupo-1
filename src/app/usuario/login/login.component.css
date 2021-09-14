@@ -73,4 +73,9 @@ input.ng-valid {
     margin-top: .4rem;
     margin-left: 2rem;
   }
+
+  .button:hover {
+    background: #D3E0EA;   
+    color:  #276678;
+}
     
