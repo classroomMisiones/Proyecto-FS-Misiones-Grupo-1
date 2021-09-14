@@ -9,36 +9,45 @@
   <div class="row aling-items-center justify-content-center">
   
       <h1 class="font-weight-bold mb-4 text-center">Cree una cuenta en MyMoney</h1>
-      <form class="">
+      <form class="" [formGroup]="registro">
         <div class="row">            
             
             <div class="col-12 col-sm-12 col-md-6 col-lg-6"> <!--columna izquierda-->
               
               <div class="mb-4">
-                <label for="validationDefaultUsername" class="form-label">Usuario <span class="text-danger">*</span></label>
+                <label class="form-label">Usuario</label>
                 <div class="input-group">
                   <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                  <input type="text" class="form-control border-2" placeholder="Nombre de Usuario" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+                  <input type="text" class="form-control" placeholder="Nombre de Usuario"  
+                  aria-describedby="inputGroupPrepend2" formControlName="usuario">
                 </div>
+                <p *ngIf="usuario!.invalid && usuario!.touched" class="advertencia"
+                            style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller;">
+                            Nombre de usuario necesario. Mínimo 5 caracteres.</p>
               </div>
-
             </div>
               
             <div class="col-12 col-sm-12 col-md-6 col-lg-6"> <!--columna derecha-->
               
               <div class="mb-4" >
-                <label for="exampleInputEmail1" class="form-label font-weight-bold">Email <span class="text-danger">*</span></label>
-                <input type="email" class="form-control border-2  " placeholder="Ingresa tu Email" required id="exampleInputEmail1">
+                <label class="form-label font-weight-bold">Email</label>
+                <input type="email" class="form-control" placeholder="Ingrese su Email" formControlName="email">
+                <p *ngIf="email!.invalid && email!.touched" class="advertencia"
+                            style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller;">
+                            Correo necesario. Formato usuario@proveedor.com</p>
               </div>
             </div>
           </div>
 
-        <div class="row ">
+        <div class="row">
           <div class="col-12 col-sm-12 col-md-6 col-lg-6"> <!--columna derecha-->
             
             <div class="mb-4" >
-              <label for="Password1" class="form-label font-weight-bolt ">Contraseña <span class="text-danger">*</span></label>
-              <input type="password" class="form-control border-2 " placeholder="Ingrese su contraseña" required id="Password1">
+              <label class="form-label font-weight-bolt ">Contraseña</label>
+              <input type="password" class="form-control" placeholder="Ingrese su contraseña" formControlName="contrasena">
+              <p *ngIf="contrasena!.invalid && contrasena!.touched" class="advertencia"
+                            style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller;">
+                            Contraseña necesaria. Mínimo 5 caracteres.</p>
             </div>
 
           </div>
@@ -46,8 +55,11 @@
           <div class="col-12 col-sm-12 col-md-6 col-lg-6"> <!--columna izquierda-->
               
             <div class="mb-4">
-              <label for="Password2" class="form-label font-weight-bolt ">Repetir contraseña <span class="text-danger">*</span></label>
-              <input type="password" class="form-control border-2 " placeholder="Repita su contraseña" required id="Password2">
+              <label class="form-label font-weight-bolt">Repetir contraseña</label>
+              <input type="password" class="form-control" placeholder="Repita su contraseña" formControlName="repetirContrasena">
+              <p *ngIf="repetirContrasena!.invalid && repetirContrasena!.touched" class="advertencia"
+                            style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller;">
+                            Debe introducir la misma contraseña.</p>
             </div>
 
           </div>
@@ -58,8 +70,11 @@
           <div class="col-12 col-sm-12 col-md-6 col-lg-6"> <!--columna izquierda-->
             
             <div class="mb-4">
-              <label for="validationDefault01" class="form-label">Nombre <span class="text-danger">*</span></label>
-              <input type="text" class="form-control border-2"  placeholder="Sus Nombres" required id="validationDefault01">
+              <label class="form-label">Nombre</label>
+              <input type="text" class="form-control"  placeholder="Su/s nombre/s" formControlName="nombre">
+              <p *ngIf="nombre!.invalid && nombre!.touched" class="advertencia"
+                            style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller;">
+                            Debe introducir un nombre válido. Sin números.</p>
             </div>
 
           </div>
@@ -67,15 +82,18 @@
           <div class="col-12 col-sm-12 col-md-6 col-lg-6"> <!--columna derecha-->
             
             <div class="mb-4">
-              <label for="validationDefault02" class="form-label">Apellido <span class="text-danger">*</span></label>
-              <input type="text" class="form-control border-2" id="validationDefault02" placeholder="Su Apellido" required>
+              <label class="form-label">Apellido</label>
+              <input type="text" class="form-control" placeholder="Su/s apellido/s" formControlName="apellido">
+              <p *ngIf="apellido!.invalid && apellido!.touched" class="advertencia"
+                            style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller;">
+                            Debe introducir un apellido válido. Sin números.</p>
             </div>
 
           </div>
 
         </div>
 
-        <button type="submit" class="mb-4 gradiente-btn btn btn-primary rounded-pill box-sombra col-12 col-sm-12 col-lg-12 col-xl-12 mb-auto btn btn-primary">Ingresar</button>
+        <button type="submit" class="mb-4 gradiente-btn btn btn-primary rounded-pill box-sombra col-12 col-sm-12 col-lg-12 col-xl-12 mb-auto btn btn-primary">Registrarse</button>
       </form>
    </div>   
 </body>

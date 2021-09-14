@@ -4,6 +4,18 @@
     --light:#F6F5F5;
 }
 
+input.ng-valid {
+    border-left: 4px solid green;
+  }
+  
+  input.ng-invalid {
+    border-left: 4px solid red;
+  }
+  
+  input.ng-pristine {
+    border-left: 4px solid yellow;
+  }
+
 body{
     font-family: 'Roboto', sans-serif;
     font-weight: 300; 
@@ -51,13 +63,17 @@ a:hover{
     box-shadow: 0 8px 6px -6px #999;
 }
 
-
-
-
-
 .flexbox-container {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: space-between;
+  }
+
+  p {
+    font-weight: lighter;
+    font-family: sans-serif;
+    margin-bottom: 0%;
+    margin-top: .4rem;
+    margin-left: 2rem;
   }
