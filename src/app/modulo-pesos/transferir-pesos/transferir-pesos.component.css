@@ -2,13 +2,25 @@ label {
     text-align: center;
 }
 
-input.ng-invalid {
-    border-left: 5xp solid red;
+.row {
+  margin-bottom: 3px;
+  margin-top: 3px;
 }
 
 input.ng-valid {
-    border-left: 5px solid green;
+  border-left: 5px solid green;
 }
+
+input.ng-invalid {
+  border-left: 5px solid red;
+}
+
+input.ng-pristine {
+  border-left: 5px solid yellow;
+}
+
+
+
 
 .box-sombra {
     -webkit-box-shadow: 0 8px 6px -6px #999;

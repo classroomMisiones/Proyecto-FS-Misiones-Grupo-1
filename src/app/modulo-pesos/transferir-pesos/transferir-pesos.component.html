@@ -5,42 +5,45 @@
                     <div class="pl-2"></div>
                     <h3>Transferir Dinero</h3>
             </div>
+            
         <!--Acá va la transferencia-->
-        <div class="box-sombra border border-dark form-control p-4" style="background-color: #b1b3b3;" 
-        style="padding: 5px;">
-
-            <form [formGroup]="transferirPesos">
-                <div class="row align-items-center" style="padding-top: 5px">
-                    <div class="form-group col-auto" style="padding-right: 5px; min-width: 75px">
-                        <label style="padding-left: 4px">
-                            Cuenta:</label>
+        <div class="box-sombra border border-dark form-control p-4" style="background-color: #e8fafa; padding: 5px"
+        [formGroup]="transferirPesos">
+            <div class="row" style="align-items: baseline; text-align: center;"> <!--Comienza fila 1-->
+                <div class="col-4"> <!--Columna izquierda, fila 1-->
+                    <div class="col-auto">
+                        <label style="padding-left: 4px">Usuario o CVU:</label>
                     </div>
-                    <div class="col" style="padding-left: 0px">
+                </div>
+                <div class="col-8"> <!--Columna derecha, fila 1-->
+                    <div class="col">
                         <input type="text" class="form-control" formControlName="cuentaATransferir">
                     </div>
+                    <span *ngIf="cuentaATransferir!.invalid && cuentaATransferir!.touched"
+                            style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller;">
+                            Cuenta necesaria. Ingrese un CVU o usuario válido.</span>
                 </div>
+            </div>
 
-                <span *ngIf="cuentaATransferir && cuentaATransferir.invalid && cuentaATransferir.touched"
-                style="color: rgb(136, 17, 37); font-style: italic; padding-left: 75px; font-size: smaller;">
-                Cuenta necesaria</span>
 
-                <div class="row align-items-center" style="padding-top: 5px;">
-                    <div class="col-auto" style="padding-right: 5px; min-width: 75px">
-                        <label style="padding-left: 4px">
-                            Monto:</label>
+            <div class="row" style="align-items: baseline; text-align: center;"><!--Comienza fila 2-->
+                <div class="col-4"> <!--Columna izquierda, fila 2-->
+                    <div class="col-auto">
+                        <label style="padding-left: 4px">Monto:</label>
                     </div>
-                    <div class="col" style="padding-left: 0px">
+                </div>
+                <div class="col-8"> <!--Columna derecha, fila 2-->
+                    <div class="col">
                         <input type="number" class="form-control" formControlName="montoATransferir">
                     </div>
+                    <span *ngIf="montoATransferir!.invalid && montoATransferir!.touched" 
+                            style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller;">
+                            Monto necesario.</span>
                 </div>
-
-                <span *ngIf="montoATransferir && montoATransferir.invalid && montoATransferir.touched" 
-                style="color: rgb(136, 17, 37); font-style: italic; padding-left: 75px; font-size: smaller;">
-                Monto necesario</span>
-
-            </form>
+            </div>
         </div>
         <!--Hasta acá-->
+
             <div class="mt-2">
                 <button class=" gradiente-btn btn btn-primary rounded-pill box-sombra" [routerLink]="['/transferirpesos']">
                     Realizar Transferencia</button>

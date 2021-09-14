@@ -8,10 +8,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class TransferirPesosComponent implements OnInit {
 
-  transferirPesos= new FormGroup({
-    cuentaATransferir: new FormControl('', [Validators.required, Validators.minLength(11)]),
-    montoATransferir: new FormControl('', [Validators.required])
+  transferirPesos = new FormGroup({
+    cuentaATransferir: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    montoATransferir: new FormControl('', [Validators.required, Validators.min(1)]),
   })
+    
 
   constructor() { }
 
@@ -19,11 +20,11 @@ export class TransferirPesosComponent implements OnInit {
   }
 
   get cuentaATransferir() {
-    return this.transferirPesos.get('cuentaATransferir');
+  return this.transferirPesos.get('cuentaATransferir');
   }
 
   get montoATransferir() {
-    return this.transferirPesos.get('montoATransferir');
+  return this.transferirPesos.get('montoATransferir');
   }
 
 }
