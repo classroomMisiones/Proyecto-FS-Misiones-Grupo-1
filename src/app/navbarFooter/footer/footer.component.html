@@ -1,11 +1,33 @@
-<footer> 
-    <div class="container-fluid-md">                  
-          <div class="row gradient-custom ">              
+<footer class="footer">
+    <div class="">
+        <ul class="breadcrumb2 gradient-custom">
+            <li><a routerLink="" routerLinkActive="link-activo" [routerLinkActiveOptions]="
+                {exact: true}">Inicio</a></li>
+            <li><a routerLink="quienessomos" routerLinkActive="link-activo" [routerLinkActiveOptions]="
+                {exact: true}">Quiénes somos</a></li>
+            <li><a routerLink="preguntasfrecuentes" routerLinkActive="link-activo" [routerLinkActiveOptions]="
+                {exact: true}">FAQ</a></li>
+            <li><a routerLink="legales" routerLinkActive="link-activo" [routerLinkActiveOptions]="
+                {exact: true}">Legales</a></li>
+            <li><a routerLink="contacto" routerLinkActive="link-activo" [routerLinkActiveOptions]="
+                {exact: true}">Contáctanos</a></li>
+            <li><a>© MyMoney 2021 – Todos los derechos reservados.</a></li>
+        </ul>
+      </div>
+</footer>
+
+
+
+
+
+<!-- <footer> 
+    <div class="container-fluid">                  
+          <div class="row gradient-custom">              
                 <div class="col .columna-mobile-100">
                     <h3>MyMoney</h3>
                     <ul>
-                        <li><a href="#">Quienes Somos</a></li>
-                        <li><a href="#">Politicas de Privacidad</a></li>
+                        <li><a routerLink="quienessomos">Quiénes Somos</a></li>
+                        <li><a routerLink="preguntasfrecuentes">Preguntas frecuentes</a></li>
                         <li>&copy; MyMoney 2021 | All Rights Reserved.</li>
                     </ul>
                 </div>
@@ -14,17 +36,16 @@
                     <ul>
                         <li><a href="#">alvez_jmariano@hotmail.com.ar</a></li>
                         <li><p><a class="tel" href="#">+543755999988 </a></p></li>
-                        <li><a href="#">Dirección</a></li>
                     </ul>
                 </div>
-                <div class="col .columna-mobile-100">
+           </div>        
+    </div>     
+</footer> -->
+                <!-- <div class="col .columna-mobile-100">
                     <h3>Nuestras Redes</h3>
                     <ul class="redes">
                       <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
                       <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
                       <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                     </ul>
-                </div>
-           </div>        
-    </div>     
-</footer>
+                </div>-->

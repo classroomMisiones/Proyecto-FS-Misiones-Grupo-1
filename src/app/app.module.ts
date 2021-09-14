@@ -33,6 +33,10 @@ const appRoutes: Routes = [
   { path: 'transferirpesos', component: TransferirPesosComponent },
   { path: 'comprarcripto', component: CompraCriptoComponent },
   { path: 'vendercripto', component: VenderCriptoMonedaComponent },
+  { path: 'quienessomos', component: QuienesSomosComponent },
+  { path: 'preguntasfrecuentes', component: PreguntasFrecuentesComponent },
+  { path: 'legales', component: LegalesComponent },
+  { path: 'contacto', component: ContactoComponent },
   // { path: 'salir', component: LoginComponent }
 ];
 

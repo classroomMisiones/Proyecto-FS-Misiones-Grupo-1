@@ -1,34 +1,34 @@
-<!--↓Acá mandamos al componente navbar los valores dentro de estas propiedades↓-->
-<app-navbar 
-[registro]="registro"
-[inicio]="inicio"
-[cripto]="cripto"
-[misaldo]="misaldo"
-[usuario]="usuario"
-[salir]="salir"></app-navbar>
-<!--↑navbar está escuchando con los @input↑-->
-
-
-<!-- <app-registration-form></app-registration-form> -->
-<!--<app-login></app-login>-->
-<!-- <app-vender-cripto-moneda></app-vender-cripto-moneda> -->
-<!-- <app-modulo-pesos></app-modulo-pesos> -->
-<!-- Modulos Registro Usuario y modulo Login -->
-<!--<app-registration-form></app-registration-form>-->
-<!-- <app-login></app-login> -->
-<!-- <app-perfil-usuario></app-perfil-usuario> -->
-<!-- <app-vender-cripto-moneda></app-vender-cripto-moneda> -->
-<!-- <app-modulo-pesos></app-modulo-pesos> -->
-<!-- <app-transferir-pesos></app-transferir-pesos>
-<br>
-<app-ultimas-transferencias-pesos></app-ultimas-transferencias-pesos> -->
-
-<router-outlet></router-outlet>
-
-<app-contacto></app-contacto>
+<div class="contenedor">
+  <!--↓Acá mandamos al componente navbar los valores dentro de estas propiedades↓-->
+  <app-navbar
+    [registro]="registro"
+    [inicio]="inicio"
+    [cripto]="cripto"
+    [misaldo]="misaldo"
+    [usuario]="usuario"
+    [salir]="salir"
+  ></app-navbar>
+  <!--↑navbar está escuchando con los @input↑-->
+ 
+  <router-outlet></router-outlet>
+</div>
+  <!-- El outlet por default va a mostrar login-component -->
+  <app-footer></app-footer>
+  <!--Footer dejar al final-->
+  <!-- <app-contacto></app-contacto>
 <app-legales></app-legales>
 <app-quienes-somos></app-quienes-somos>
-<app-preguntas-frecuentes></app-preguntas-frecuentes>
+<app-preguntas-frecuentes></app-preguntas-frecuentes> -->
 
-<!--Footer dejar al final-->
-<app-footer></app-footer>
+  <!-- <app-registration-form></app-registration-form> -->
+  <!--<app-login></app-login>-->
+  <!-- <app-vender-cripto-moneda></app-vender-cripto-moneda> -->
+  <!-- <app-modulo-pesos></app-modulo-pesos> -->
+  <!-- Modulos Registro Usuario y modulo Login -->
+  <!--<app-registration-form></app-registration-form>-->
+  <!-- <app-login></app-login> -->
+  <!-- <app-perfil-usuario></app-perfil-usuario> -->
+  <!-- <app-vender-cripto-moneda></app-vender-cripto-moneda> -->
+  <!-- <app-modulo-pesos></app-modulo-pesos> -->
+  <!-- <app-transferir-pesos></app-transferir-pesos> -->
+

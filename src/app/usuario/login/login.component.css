@@ -18,7 +18,7 @@ body{
 }
 
 .row {
-    height: 450px;
+    height: auto;
 }
 
 .btn{
@@ -47,9 +47,6 @@ a:hover{
     background-position: center;
   
 }
-.carousel-inner{
-    height: 500px;
-    }
 
 .box-sombra {
     -webkit-box-shadow: 0 8px 6px -6px #999;

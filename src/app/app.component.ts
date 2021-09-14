@@ -9,7 +9,7 @@ import { NavigationStart, Router } from '@angular/router';
 
 
 export class AppComponent implements OnInit{
-  title = 'mymoney';
+  title = 'MyMoney';
 
   /*↓Estos bools controlan la visibilidad de elementos de la navbar↓*/
   registro = true
@@ -31,7 +31,7 @@ export class AppComponent implements OnInit{
     })
   }
 
-  /* ↓En función a esos eventos, encendemos o apagamos partes de la navbar↓ */
+  /* ↓En función a esos eventos, encendemos o apagamos partes del navbar↓ */
   determinarEstado(urlActual: string) {
     switch (urlActual) {
       case '/registro':

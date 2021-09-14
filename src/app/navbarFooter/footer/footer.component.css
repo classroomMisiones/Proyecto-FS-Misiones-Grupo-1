@@ -1,66 +1,79 @@
-
-footer{
-    margin-top: 50px;
+.footer {
+    margin: 0px;
+    padding: 0px;
 }
 
-.row{
-padding: 25px;
-
+.breadcrumb2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: flex-start;
+    margin: 0px;
+    list-style: none;
+    margin-top: auto;
 }
 
-h3{
-    color: #276678;
-}
-
-ul{
-    padding-left: 0;
-    list-style:none ;
-    margin: 0;
-}
-
-ul li{
-    margin: 10px;
+ul li {
+    padding: 0px 5% 0px 1%;
+    margin-bottom: 0.5%;
+    margin-top: 0.5%;
 }
 
 ul li a{
-    color: #276678;
-    text-decoration: none;    
+    text-decoration: none;
+    color: rgb(17, 72, 155);
+    white-space: nowrap;
 }
 
-.redes{
-    font-size: 30px;
-    display: flex;
-    justify-content: space-between;
-    
+ul li:last-child{
+    margin-left: auto;
 }
-.redes a{
-    margin: 0 7.5px;
-    color: #276678;
-}
-
-
-  @media(max-width:767px){
-      
-        .footer{
-            text-align: center;
-        }
-
-        .columna-mobile-100{
-            width: 100%;
-        }
-  
- } /* //cierra @media  */
-
-
 
 .gradient-custom {
-   
     background: #D3E0EA;
-  
     /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(to right,  #D3E0EA, #F6F5F5);
-  
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, #D3E0EA, #F6F5F5)
 }
 
+ul.breadcrumb2 li a::after{
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: black;
+    transition: 400ms;
+}
+
+ul.breadcrumb2 li a:hover::after{
+    width: 100%;
+}
+
+ul.breadcrumb2 li a::before{
+    content: '';
+    width: 0px;
+    height: 1.6px;
+    display: block;
+    background: black;
+    /*Floating right es lo que hace que la otra línea empiece inversamente*/
+    float: right;
+    transition: 400ms;
+}
+
+ul.breadcrumb2 li a:hover::before{
+    width: 100%;
+}
+
+ul.breadcrumb2 li a.link-activo::before{
+    content: '';
+    margin-bottom: 1px;
+    margin-right: 10%;
+    width: 80%;
+    height: 2.5px;
+    display: block;
+    background: rgb(17, 1, 24);
+    transition: 600ms;
+}

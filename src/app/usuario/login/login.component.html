@@ -6,35 +6,33 @@
 
 <body class="bg-light">
 <section>
-    <div class="row g-0"  >
-        <div class="col-lg-7">
+    <div class="row">
+        <div class="col-lg-7 d-flex flex-column">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
+                <!-- <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                </div>
+                </div> -->
+                <!-- Los indicadores del carrusel los saqué porque no sumaban mucho y se peleaban un poquito con el footer -->
                 <div class="carousel-inner">
-                  <div class="carousel-item active min-vh-100 ">
-                      <img src="../../../assets/bCeluCop.jpg" class="d-block w-100" alt="Imagen Muestra Aplicasion 1">
-                        <h5 class="font-wieght">La Wallet mas potente del mercado</h5>                        
-                  </div>
-                  <div class="carousel-item min-vh-100">
+                  <div class="carousel-item active">
                     <img src="../../../assets/bCel.jpg" class="d-block w-100" alt="...">
                   </div>
-                  <div class="carousel-item min-vh-100">
+                  <div class="carousel-item">
                     <img src="../../../assets/bCelAzul.jpg" class="d-block w-100" alt="...">
                   </div>
-                  <div class="carousel-item min-vh-100">
+                  <!-- <div class="carousel-item">
                     <img src="../../../assets/bCeluCop.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item min-vh-100">
+                  </div> -->
+                  <!-- Saqué esta imagen, y la que era igual al comienzo, porque tienen distintas dimensiones a las otras y quedaba raro -->
+                  <div class="carousel-item">
                     <img src="../../../assets/bMonedaAzul.jpg" class="d-block w-100" alt="...">
                   </div>
-                  <div class="carousel-item min-vh-100">
+                  <div class="carousel-item">
                     <img src="../../../assets/bVerde.jpg" class="d-block w-100" alt="...">
                   </div>
                 </div>
@@ -48,18 +46,19 @@
                 </button>
               </div>
         </div>
-    <div class="col-lg-5 d-flex flex-column min-vh-100">
+
+    <div class="col-lg-5 d-flex flex-column">
         <div class="px-lg-5 py-lg-4 p-4 w-100 aling-self-center">
             <h1 class="font-weight-bold mb-4">Ingresá a MyMoney</h1>
             <form>
                 <div class="mb-4">
                   <label for="exampleInputEmail1" class="form-label font-weight-bold">Email</label>
-                  <input type="email" class="form-control border-2" placeholder="Ingresa tu Email" required id="exampleInputEmail1">
+                  <input type="email" class="form-control border-2" placeholder="Ingresá tu email" required id="exampleInputEmail1">
                 </div>
 
                 <div class="mb-4">
                   <label for="exampleInputPassword1" class="form-label font-weight-bolt">Contraseña</label>
-                  <input type="password" class="form-control border-2" placeholder="Ingresa tu contraseña" required id="exampleInputPassword1">
+                  <input type="password" class="form-control border-2" placeholder="Ingresá tu contraseña" required id="exampleInputPassword1">
                 </div>
 
                 <button type="submit" class="mb-4 gradiente-btn btn rounded-pill box-sombra w-100" routerLink="modulopesos">Ingresar</button>
@@ -67,12 +66,9 @@
                 <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p-4 "> 
                     <a href="#" id="recuperarContraseña" class=" form-text  text-decoration-none margen_link" > ¿Olvidaste tu contraseña?</a>
                 </div>
-            
-                
-
               </form>
         </div>
-    </div>
+      </div>
     </div>
 </section>
 </body>

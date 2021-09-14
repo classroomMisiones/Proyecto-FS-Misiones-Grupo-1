@@ -1,0 +1,7 @@
+.contenedor {
+    min-height: 94vh;
+    max-height: 96vh;
+    max-width: 99vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
