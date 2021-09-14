@@ -50,15 +50,21 @@
     <div class="col-lg-5 d-flex flex-column">
         <div class="px-lg-5 py-lg-4 p-4 w-100 aling-self-center">
             <h1 class="font-weight-bold mb-4">Ingresá a MyMoney</h1>
-            <form>
+            <form [formGroup]="login">
                 <div class="mb-4">
-                  <label for="exampleInputEmail1" class="form-label font-weight-bold">Email</label>
-                  <input type="email" class="form-control border-2" placeholder="Ingresá tu email" required id="exampleInputEmail1">
+                  <label class="form-label font-weight-bold">Email</label>
+                  <input type="email" class="form-control" placeholder="Ingresá tu email" formControlName="email">
+                  <p *ngIf="email!.invalid && email!.touched" class="advertencia"
+                            style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller;">
+                            Correo necesario. Formato usuario@proveedor.com</p>
                 </div>
 
                 <div class="mb-4">
-                  <label for="exampleInputPassword1" class="form-label font-weight-bolt">Contraseña</label>
-                  <input type="password" class="form-control border-2" placeholder="Ingresá tu contraseña" required id="exampleInputPassword1">
+                  <label class="form-label font-weight-bolt">Contraseña</label>
+                  <input type="password" class="form-control" placeholder="Ingrese su contraseña" formControlName="contrasena">
+                  <p *ngIf="contrasena!.invalid && contrasena!.touched" class="advertencia"
+                            style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller;">
+                            Ingrese una contraseña. Mínimo 5 caracteres.</p>
                 </div>
 
                 <button type="submit" class="mb-4 gradiente-btn btn rounded-pill box-sombra w-100" routerLink="modulopesos">Ingresar</button>
