@@ -1,8 +1,8 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,500&family=Spartan:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,500&family=Spartan:wght@300;600&display=swap" rel="stylesheet"> -->
 
 <body class="bg-light">
 <section>
@@ -63,9 +63,11 @@
 
                 <button type="submit" class="mb-4 gradiente-btn btn rounded-pill box-sombra w-100" routerLink="modulopesos">Ingresar</button>
                 
-                <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p-4 "> 
-                    <a href="#" id="recuperarContraseña" class=" form-text  text-decoration-none margen_link" > ¿Olvidaste tu contraseña?</a>
+                <div class=" breadcrumb2 text-center px-lg-5 pt-lg-3 pb-lg-4 p-4 "> 
+                    <li><a routerLink="RecoveryPasswordComponent" routerLinkActive="link-activo" [routerLinkActiveOptions]="
+                  {exact: true}">¿Olvidaste tu contraseña?</a></li>
                 </div>
+                
               </form>
         </div>
       </div>

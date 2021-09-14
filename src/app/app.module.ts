@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './usuario/login/login.component';
 import { RegistrationFormComponent } from './usuario/registration-form/registration-form.component';
+import { RecoveryPasswordComponent } from './usuario/recovery-password/recovery-password.component';
 
 import { VenderCriptoMonedaComponent } from './CriptoMoneda/vender-cripto-moneda/vender-cripto-moneda.component';
 import { ModuloPesosComponent } from './Inicio/modulo-pesos/modulo-pesos.component';
@@ -24,6 +25,7 @@ import { LegalesComponent } from './otras/legales/legales.component';
 import { ContactoComponent } from './otras/contacto/contacto.component';
 
 
+
 const appRoutes: Routes = [
   { path: '', component: LoginComponent  },
   { path: 'registro', component: RegistrationFormComponent },
@@ -37,6 +39,7 @@ const appRoutes: Routes = [
   { path: 'preguntasfrecuentes', component: PreguntasFrecuentesComponent },
   { path: 'legales', component: LegalesComponent },
   { path: 'contacto', component: ContactoComponent },
+  { path: 'RecoveryPasswordComponent', component: RecoveryPasswordComponent },
   // { path: 'salir', component: LoginComponent }
 ];
 
@@ -56,7 +59,8 @@ const appRoutes: Routes = [
     ContactoComponent,
     LegalesComponent,
     PreguntasFrecuentesComponent,
-    QuienesSomosComponent
+    QuienesSomosComponent,
+    RecoveryPasswordComponent
 
   ],
   imports: [
