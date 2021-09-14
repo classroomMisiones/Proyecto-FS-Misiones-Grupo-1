@@ -9,7 +9,7 @@ export class CompraCriptoComponent implements OnInit {
 
   comprarCripto= new FormGroup({
     //cuentaATransferir: new FormControl('', [Validators.required, Validators.minLength(11)]),
-    montoCripto: new FormControl('', [Validators.required])
+    montoCripto: new FormControl('', [Validators.required, Validators.min(0)])
   })
 
 
