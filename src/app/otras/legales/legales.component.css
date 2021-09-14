@@ -24,7 +24,7 @@
 }
 
 .title {   
-    font-size: 28px; 
+    font-size: 25px; 
     color:#276678;
     animation-duration: 15s;
     animation-name: aparecer;
@@ -33,7 +33,8 @@
 
 .title{
     text-align: center;
-    margin-block-end: 10px;
+    margin-block-end: 8px;
+    border: 2px double rgb(255, 255, 255);
 }
 
 .navbar_aside ul li {
@@ -51,8 +52,8 @@
 /*GRID AREA*/
 .aside {
     grid-area: aside;
-    padding-top: 100px;
-    margin-bottom: 15px;    
+    padding-top: 75px;
+    margin-bottom: 10px;    
  }
  
  .preguntas {
@@ -61,10 +62,17 @@
  
  .grid-container {
     display: grid;
-    gap: 10px;   
-    grid-template: 
-    "aside  preguntas" auto /
-     150px  auto;    
+    gap: 5px;   
+ }
+
+ .p__servicio p{
+     font-size: 17px;
+     color: rgba(3, 53, 94, 0.664);
+ }
+
+ .p__servicio p:hover {
+     background-color: rgb(246, 250, 196);
+     transition: 3s;
  }
  
  /*mas de 700 px pasa a modo tablet*/
@@ -86,3 +94,8 @@
         flex-wrap: wrap;    
     }
  }/* Cierro media query de 700px*/
+
+ .title:hover {
+     border: 2px double black;
+     transition: 3s;
+ }
