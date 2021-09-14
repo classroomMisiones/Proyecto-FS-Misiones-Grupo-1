@@ -43,3 +43,26 @@ input.ng-valid {
   .nowrap {
       white-space: nowrap;
   }
+
+  .boton-volver button:first-child {
+    float: left;
+  }
+
+  .boton-volver button:last-child:hover {
+    background: rgb(186, 219, 0);
+    font-style: oblique;
+    font-weight: bold;
+    transition: 400ms;
+  }
+
+  input.ng-valid {
+    border-left: 4px solid green;
+  }
+  
+  input.ng-invalid {
+    border-left: 4px solid red;
+  }
+  
+  input.ng-pristine {
+    border-left: 4px solid yellow;
+  }

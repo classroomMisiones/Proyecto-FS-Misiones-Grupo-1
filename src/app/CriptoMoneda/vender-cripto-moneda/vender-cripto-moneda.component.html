@@ -13,21 +13,21 @@
                     <label class="col-3 col-form-label" for="moneda">Moneda</label>
                     <div   class="col-8">
                         <select name="moneda" id="moneda" class="form-select" required>
-                            <option selected>CriptoMoneda...</option>
+                            <option selected>Elegir criptomoneda...</option>
                             <option >Bitcoin</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group row mb-3 ">
-                    <label for="monto" class="col-3 col-form-label ">Monto</label>
+                    <label for="monto" class="col-3 col-form-label">Monto</label>
                     <div class="col-8">
-                        <input class="form-control " type="text" name="monto" id="monto" placeholder="Monto a vender" formControlName="montoCripto" >
+                        <input class="form-control " type="number" name="monto" id="monto" placeholder="Monto a vender" formControlName="montoCripto" >
                     </div>
                     
-                    <span *ngIf="montoCripto && montoCripto.invalid && montoCripto.touched" 
+                    <span *ngIf="montoCripto!.invalid && montoCripto!.touched" 
                 style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller; padding-left: 33%;">
-                Monto necesario</span>
+                Monto necesario. Debe ser mayor a 0.</span>
                 </div>
                 
                 <div class="form-group row mb-3">
@@ -39,7 +39,9 @@
             </form>
         </div>
         <!--Hasta acá-->
-            <div class="mt-2">
+            <div class="mt-2 boton-volver">
+                <button class="gradiente-btn btn btn-primary rounded-pill box-sombra" routerLink="/modulocripto">
+                    Volver</button>
                 <button class=" gradiente-btn btn btn-primary rounded-pill box-sombra">
                     Vender</button>
             </div>
