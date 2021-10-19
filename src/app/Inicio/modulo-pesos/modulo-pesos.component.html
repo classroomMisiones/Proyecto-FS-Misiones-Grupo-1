@@ -27,6 +27,15 @@
                         <div class="col-12 mb-3 p-2">
                             <input class="box-sombra form-control rounded-pill" type="text" placeholder="Buscar...">
                         </div>
+                        <table class="table">
+                            <tbody>
+                                <tr *ngFor="let saldo of listsaldo">
+                                    <td>{{saldo.moneda}}</td>
+                                    <td>{{saldo.operacion}}</td>
+                                    <td>{{saldo.monto}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <!-- <div class=" box-sombra border border-dark form-control d-flex text-center align-items-center p-0">
                             <div class="col-3 p-3">
                                 <img  src="" alt="Bitcoin">
