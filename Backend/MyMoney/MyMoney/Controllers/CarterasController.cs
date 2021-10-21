@@ -33,18 +33,18 @@ namespace MyMoney.Controllers
         }
 
         // GET: api/Carteras/5
-        public string Get(int id)
+        public IHttpActionResult Get(int id)
         {
             DataTable dt = new DataTable();
             string cvu = "";
             using (SqlConnection conector = new SqlConnection(cadena))
             {
                 conector.Open();
-                SqlCommand comando = new SqlCommand("SELECT cvu FROM Carteras Where idMoneda = " + id, conector);
-                cvu = comando.ExecuteScalar().ToString();
-            }
-            return cvu;
-        }
+                SqlDataAdapter adaptador = new SqlDataAdapter("SELECT cli.idCliente as Cliente,trans.idCarteraOrigen as Origen,trans.idCarteraDestino as Destino, trans.monto as monto, car.idCartera as Cartera FROM Carteras as car  INNER JOIN Clientes as cli ON cli.idCliente = car.idCliente INNER JOIN Transferencias as trans ON car.idCartera = trans.idCarteraDestino WHERE trans.idCarteraOrigen = " +id + " OR trans.idCarteraDestino = " + id + " AND cli.idCliente = " + id, conector);
+                adaptador.Fill(dt);
+          }
+                return Ok(dt);
+          }
 
         // POST: api/Carteras
         public void Post([FromBody] Models.Carteras oCartera)

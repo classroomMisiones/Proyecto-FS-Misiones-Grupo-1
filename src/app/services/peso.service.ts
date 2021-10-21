@@ -9,11 +9,16 @@ export class PesoService {
 private myAppUrl = "https://localhost:44393/";
 private myApiUrl = "api/Carteras/";
 
+
   constructor(private http: HttpClient) { 
 
   }
 
   getListpesos(): Observable<any>{
     return this.http.get(this.myAppUrl + this.myApiUrl);
+  }
+
+  getList(id: number): Observable<any>{
+    return this.http.get(this.myAppUrl + this.myApiUrl + id);
   }
 }

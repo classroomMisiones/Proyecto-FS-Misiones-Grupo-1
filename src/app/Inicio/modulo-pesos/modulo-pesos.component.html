@@ -24,23 +24,19 @@
                         <h3>Tus Actividades</h3>
                 </div>
                 <div class="box-sombra border border-dark form-control p-4">
-                        <div class="col-12 mb-3 p-2">
-                            <input class="box-sombra form-control rounded-pill" type="text" placeholder="Buscar...">
-                        </div>
+                        
                         <table class="table">
                             <tbody >
                                 <tr *ngFor="let saldo of listsaldo">
                                     <td *ngIf="saldo.Origen != saldo.Destino && saldo.Origen != idUsuario ">
                                         Recibiste
                                     </td>
-                                    <td *ngIf="saldo.Origen != saldo.Destino && saldo.Destino != 4  ">
+                                    <td *ngIf="saldo.Origen != saldo.Destino && saldo.Destino != idUsuario">
                                         Transferiste
                                     </td>
                                     <td *ngIf="saldo.Origen == saldo.Destino ">
                                         Ingresaste
                                     </td>
-                                    <td>{{saldo.Origen}}</td>
-                                    <td>{{saldo.Destino}}</td>
                                     <td>${{saldo.monto}}</td>
                                 </tr>
                             </tbody>
