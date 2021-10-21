@@ -28,11 +28,20 @@
                             <input class="box-sombra form-control rounded-pill" type="text" placeholder="Buscar...">
                         </div>
                         <table class="table">
-                            <tbody>
+                            <tbody >
                                 <tr *ngFor="let saldo of listsaldo">
-                                    <td>{{saldo.moneda}}</td>
-                                    <td>{{saldo.operacion}}</td>
-                                    <td>{{saldo.monto}}</td>
+                                    <td *ngIf="saldo.Origen != saldo.Destino && saldo.Origen == 3">
+                                        Reciviste
+                                    </td>
+                                    <td *ngIf="saldo.Origen != saldo.Destino && saldo.Origen != 3">
+                                        Tranferiste
+                                    </td>
+                                    <td *ngIf="saldo.Origen == saldo.Destino ">
+                                        Ingresaste
+                                    </td>
+                                    <td>{{saldo.Origen}}</td>
+                                    <td>{{saldo.Destino}}</td>
+                                    <td>${{saldo.monto}}</td>
                                 </tr>
                             </tbody>
                         </table>

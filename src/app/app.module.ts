@@ -24,7 +24,7 @@ import { PreguntasFrecuentesComponent } from './otras/preguntas-frecuentes/pregu
 import { LegalesComponent } from './otras/legales/legales.component';
 import { ContactoComponent } from './otras/contacto/contacto.component';
 
-
+import {HttpClientModule} from '@angular/common/http'
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent  },
@@ -66,7 +66,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

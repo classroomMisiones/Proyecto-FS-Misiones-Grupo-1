@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -24,7 +24,7 @@ namespace MyMoney.Controllers
             using (SqlConnection conector = new SqlConnection(cadena))
             {
                 conector.Open();
-                SqlDataAdapter adaptador = new SqlDataAdapter("SELECT * FROM Carteras", conector);
+                SqlDataAdapter adaptador = new SqlDataAdapter("SELECT cli.idCliente as Cliente,trans.idCarteraOrigen as Origen,trans.idCarteraDestino as Destino, trans.monto as monto, car.idCartera as Cartera FROM Carteras as car  INNER JOIN Clientes as cli ON cli.idCliente = car.idCliente INNER JOIN Transferencias as trans ON car.idCartera = trans.idCarteraDestino WHERE trans.idCarteraOrigen = 3 OR trans.idCarteraDestino = 3 AND cli.idCliente = 3", conector);
                 adaptador.Fill(dt);
 
 
