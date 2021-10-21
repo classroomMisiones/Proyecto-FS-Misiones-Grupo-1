@@ -7,53 +7,51 @@
             </div>
             
         <!--Acá va la transferencia-->
-        <div class="box-sombra border border-dark form-control p-4" style="padding: 5px"
-        [formGroup]="transferirPesos">
-            <div class="row" style="align-items: baseline; text-align: center;"> <!--Comienza fila 1-->
-                <div class="col-4"> <!--Columna izquierda, fila 1-->
-                    <div class="col-auto">
-                        <label style="padding-left: 4px">Usuario o CVU:</label>
+        <form [formGroup]="transferirPesos" (ngSubmit)="this.transferirSaldo()">
+            <div class="box-sombra border border-dark form-control p-4" style="padding: 5px">
+                <div class="row" style="align-items: baseline; text-align: center;"> <!--Comienza fila 1-->
+                    <div class="col-4"> <!--Columna izquierda, fila 1-->
+                        <div class="col-auto">
+                            <label style="padding-left: 4px">Usuario:</label>
+                        </div>
+                    </div>
+                    <div class="col-8"> <!--Columna derecha, fila 1-->
+                        <div class="col">
+                            <input type="text" class="form-control" formControlName="usuario">
+                        </div>
+                        <span *ngIf="usuario!.invalid && usuario!.touched"
+                                style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller;">
+                                Cuenta necesaria. Ingrese un usuario válido.</span>
                     </div>
                 </div>
-                <div class="col-8"> <!--Columna derecha, fila 1-->
-                    <div class="col">
-                        <input type="text" class="form-control" formControlName="cuentaATransferir">
+    
+    
+                <div class="row" style="align-items: baseline; text-align: center;"><!--Comienza fila 2-->
+                    <div class="col-4"> <!--Columna izquierda, fila 2-->
+                        <div class="col-auto">
+                            <label style="padding-left: 4px">Monto:</label>
+                        </div>
                     </div>
-                    <span *ngIf="cuentaATransferir!.invalid && cuentaATransferir!.touched"
-                            style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller;">
-                            Cuenta necesaria. Ingrese un CVU o usuario válido.</span>
+                    <div class="col-8"> <!--Columna derecha, fila 2-->
+                        <div class="col">
+                            <input type="number" class="form-control" formControlName="monto">
+                        </div>
+                        <span *ngIf="monto!.invalid && monto!.touched" 
+                                style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller;">
+                                Monto necesario.</span>
+                    </div>
                 </div>
             </div>
-
-
-            <div class="row" style="align-items: baseline; text-align: center;"><!--Comienza fila 2-->
-                <div class="col-4"> <!--Columna izquierda, fila 2-->
-                    <div class="col-auto">
-                        <label style="padding-left: 4px">Monto:</label>
-                    </div>
-                </div>
-                <div class="col-8"> <!--Columna derecha, fila 2-->
-                    <div class="col">
-                        <input type="number" class="form-control" formControlName="montoATransferir">
-                    </div>
-                    <span *ngIf="montoATransferir!.invalid && montoATransferir!.touched" 
-                            style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller;">
-                            Monto necesario.</span>
-                </div>
-            </div>
-        </div>
-        <!--Hasta acá-->
-
             <div class="mt-2">
-                <button class=" gradiente-btn btn btn-primary rounded-pill box-sombra" [routerLink]="['/transferirpesos']">
+                <button type="submit" class=" gradiente-btn btn btn-primary rounded-pill box-sombra">
                     Realizar Transferencia</button>
             </div>
+        </form>
+        
+        <!--Hasta acá-->
+
             
-        </div>
-        <div class="mb-3 col-12 col-lg-6">
-            <div class="gradiente form-control bg-primary text-center título">
-                    <h3>Últimas Transferencias</h3>
-            </div>
+            
         </div>
     </div>
 </section>
