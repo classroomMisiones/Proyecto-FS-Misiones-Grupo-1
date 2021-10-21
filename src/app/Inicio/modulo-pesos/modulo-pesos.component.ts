@@ -12,6 +12,7 @@ import { LoginService } from 'app/services/login.service';
 export class ModuloPesosComponent implements OnInit {
   listsaldo: any[] = [];
   idUsuario: number | undefined;
+  idActual: number | undefined;
   form: FormGroup;
   constructor(private fb: FormBuilder, private _pesoService: PesoService,private _loginService: LoginService) {
     this.form=this.fb.group({
@@ -20,21 +21,31 @@ export class ModuloPesosComponent implements OnInit {
 
     })
 
-
+    
   }
 
   ngOnInit(): void {
-    this.obtenerTarjetas();
+    
+
     this.idUsuario = this._loginService.idClienteLogin;
+    this.obtener(this.idUsuario);
+    
   }
 
   obtenerTarjetas(){
     this._pesoService.getListpesos().subscribe(data => {
       console.log(data);
       this.listsaldo = data;
+      if (this.idUsuario != 0){
+        this.idActual = this.idUsuario;
+      }
     }, error => {
       console.log(error);
     })
   }
-  
+  obtener(id:number){
+    this._pesoService.getList(id).subscribe(data =>{
+      this.listsaldo = data;
+    })
+  }
 }

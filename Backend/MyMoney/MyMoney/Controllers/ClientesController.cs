@@ -76,9 +76,9 @@ namespace MyMoney.Controllers
                   idClienteNuevo = (int)reader["idCliente"]; //La volcamos en esta variable
                 }
                 reader.Close(); //Re importante cerrar
-                comando2.CommandText = "INSERT INTO Carteras(idCliente, cvu) VALUES(" //Generamos la cartera de este cliente
+                comando2.CommandText = "INSERT INTO Carteras(idCliente, cvu, saldoDisponible) VALUES(" //Generamos la cartera de este cliente
                                                      + idClienteNuevo + ", '"     //Lo vinculamos al mismo.
-                                                     + "12463256')";             
+                                                     + "12463256', 0)";             
                 comando2.ExecuteNonQuery();
       }
     }
