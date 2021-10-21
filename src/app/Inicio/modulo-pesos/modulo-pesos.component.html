@@ -30,11 +30,11 @@
                         <table class="table">
                             <tbody >
                                 <tr *ngFor="let saldo of listsaldo">
-                                    <td *ngIf="saldo.Origen != saldo.Destino && saldo.Origen == 3">
-                                        Reciviste
+                                    <td *ngIf="saldo.Origen != saldo.Destino && saldo.Origen != idUsuario ">
+                                        Recibiste
                                     </td>
-                                    <td *ngIf="saldo.Origen != saldo.Destino && saldo.Origen != 3">
-                                        Tranferiste
+                                    <td *ngIf="saldo.Origen != saldo.Destino && saldo.Destino != 4  ">
+                                        Transferiste
                                     </td>
                                     <td *ngIf="saldo.Origen == saldo.Destino ">
                                         Ingresaste

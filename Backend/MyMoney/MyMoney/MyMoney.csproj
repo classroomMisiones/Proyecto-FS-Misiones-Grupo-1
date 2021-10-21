@@ -172,7 +172,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Carteras.cs" />
-    <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\Clientes.cs" />
     <Compile Include="Models\Monedas.cs" />
     <Compile Include="Models\Operaciones.cs" />

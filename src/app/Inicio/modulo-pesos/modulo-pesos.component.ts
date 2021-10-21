@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { PesoService } from 'app/services/peso.service';
+import { LoginService } from 'app/services/login.service';
 
 
 @Component({
@@ -10,17 +11,21 @@ import { PesoService } from 'app/services/peso.service';
 })
 export class ModuloPesosComponent implements OnInit {
   listsaldo: any[] = [];
-
+  idUsuario: number | undefined;
   form: FormGroup;
-  constructor(private fb: FormBuilder, private _pesoService: PesoService) {
+  constructor(private fb: FormBuilder, private _pesoService: PesoService,private _loginService: LoginService) {
     this.form=this.fb.group({
       //Definimos los atributos que queremos traer
       cvv: ['']
+
     })
+
+
   }
 
   ngOnInit(): void {
     this.obtenerTarjetas();
+    this.idUsuario = this._loginService.idClienteLogin;
   }
 
   obtenerTarjetas(){

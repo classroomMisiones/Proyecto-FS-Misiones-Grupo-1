@@ -12,7 +12,7 @@ using System.Web.Http.Cors;
 namespace MyMoney.Controllers
 {
 
-  [EnableCors(origins: "*", headers: "*", methods: "*")]
+  [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
   public class ClientesController : ApiController
     {
     string cadena = ConfigurationManager.ConnectionStrings["MiCadena"].ConnectionString;
