@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { RegistroService } from 'app/services/registro.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
+import { ConfirmedValidator } from 'app/usuario/registration-form/ConfirmedValidator';
 
 @Component({
   selector: 'app-registration-form',
@@ -25,8 +26,12 @@ export class RegistrationFormComponent implements OnInit {
     contrasena: new FormControl('', [Validators.required, Validators.minLength(5)]),
     repetirContrasena: new FormControl('', [Validators.required, Validators.minLength(5)]),
     nombre: new FormControl('', [Validators.required, Validators.pattern('^[A-Za-zñÑáéíóúÁÉÍÓÚ ]+$'), Validators.minLength(2)]),
-    apellido: new FormControl('', [Validators.required, Validators.pattern('^[A-Za-zñÑáéíóúÁÉÍÓÚ ]+$'), Validators.minLength(2)])}, 
+    apellido: new FormControl('', [Validators.required, Validators.pattern('^[A-Za-zñÑáéíóúÁÉÍÓÚ ]+$'), Validators.minLength(2)])
+  },
     )
+    { 
+      validator: ConfirmedValidator('password', 'confirm_password')
+    }
    }
 
   ngOnInit(): void {
