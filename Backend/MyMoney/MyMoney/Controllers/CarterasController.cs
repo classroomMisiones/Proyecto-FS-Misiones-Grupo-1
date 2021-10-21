@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -11,8 +11,8 @@ using System.Web.Http.Cors;
 
 namespace MyMoney.Controllers
 {
-    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
-    public class CarterasController : ApiController
+  [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
+  public class CarterasController : ApiController
     {
         string cadena = ConfigurationManager.ConnectionStrings["MiCadena"].ConnectionString;
 

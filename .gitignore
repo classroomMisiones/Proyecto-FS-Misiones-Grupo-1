@@ -43,3 +43,5 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+Backend/MyMoney/.vs/MyMoney/config/applicationhost.config
+Backend/MyMoney/MyMoney/Web.config
