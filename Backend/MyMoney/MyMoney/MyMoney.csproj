@@ -164,14 +164,15 @@
     <Compile Include="Controllers\CarterasController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MonedasController.cs" />
     <Compile Include="Controllers\OperacionesController.cs" />
     <Compile Include="Controllers\TranferenciasController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Carteras.cs" />
+    <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\Clientes.cs" />
     <Compile Include="Models\Monedas.cs" />
     <Compile Include="Models\Operaciones.cs" />

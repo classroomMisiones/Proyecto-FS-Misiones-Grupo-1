@@ -50,13 +50,13 @@
     <div class="col-lg-5 d-flex flex-column">
         <div class="px-lg-5 py-lg-4 p-4 w-100 aling-self-center">
             <h1 class="font-weight-bold mb-4">Ingresá a MyMoney</h1>
-            <form [formGroup]="login">
+            <form [formGroup]="login" (ngSubmit)="loginConEmailoUsuario()">
                 <div class="mb-4">
                   <label class="form-label font-weight-bold">Email</label>
                   <input type="email" class="form-control" placeholder="Ingresá tu email" formControlName="email">
                   <p *ngIf="email!.invalid && email!.touched" class="advertencia"
                             style="color: rgb(136, 17, 37); font-style: italic; font-size: smaller;">
-                            Correo necesario. Formato usuario@proveedor.com</p>
+                            Email o usuario necesario.</p>
                 </div>
 
                 <div class="mb-4">
@@ -67,7 +67,7 @@
                             Ingrese una contraseña. Mínimo 5 caracteres.</p>
                 </div>
 
-                <button type="submit" class="mb-4 gradiente-btn btn rounded-pill box-sombra w-100 button" routerLink="modulopesos">Ingresar</button>
+                <button type="submit" [disabled]="this.login.invalid" class="mb-4 gradiente-btn btn rounded-pill box-sombra w-100 button">Ingresar</button>
                 
                 <div class=" breadcrumb2 text-center px-lg-5 pt-lg-3 pb-lg-4 p-4 "> 
                     <li><a routerLink="RecoveryPasswordComponent" routerLinkActive="link-activo" [routerLinkActiveOptions]="
