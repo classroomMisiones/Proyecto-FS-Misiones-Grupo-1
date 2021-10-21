@@ -24,7 +24,17 @@ import { PreguntasFrecuentesComponent } from './otras/preguntas-frecuentes/pregu
 import { LegalesComponent } from './otras/legales/legales.component';
 import { ContactoComponent } from './otras/contacto/contacto.component';
 
+<<<<<<< HEAD
 import {HttpClientModule} from '@angular/common/http'
+=======
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
+
+
+>>>>>>> 8d388ecf96efafa2adb283ad4e08d246579ec44c
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent  },
@@ -67,7 +77,13 @@ const appRoutes: Routes = [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
+<<<<<<< HEAD
     HttpClientModule
+=======
+    HttpClientModule,
+    BrowserAnimationsModule, //Este módulo y el de abajo es para los carteles de confirmación, error o información
+    ToastrModule.forRoot()   // de Toastr.
+>>>>>>> 8d388ecf96efafa2adb283ad4e08d246579ec44c
   ],
   providers: [],
   bootstrap: [AppComponent]

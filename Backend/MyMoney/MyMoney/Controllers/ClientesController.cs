@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -7,13 +7,15 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace MyMoney.Controllers
 {
-    public class ClientesController : ApiController
-    {
 
-        string cadena = ConfigurationManager.ConnectionStrings["MiCadena"].ConnectionString;
+  [EnableCors(origins: "*", headers: "*", methods: "*")]
+  public class ClientesController : ApiController
+    {
+    string cadena = ConfigurationManager.ConnectionStrings["MiCadena"].ConnectionString;
 
         // GET: api/Clientes
         [HttpGet]
@@ -50,21 +52,36 @@ namespace MyMoney.Controllers
         public void Post([FromBody] Models.Clientes oCliente)
         {
             using (SqlConnection conector = new SqlConnection(cadena))
-            {
+            {  
                 conector.Open();
+                int idClienteNuevo = 0;
                 SqlCommand comando = new SqlCommand();
-                comando.CommandText = "INSERT INTO Clientes (usuario,contraseña,nombres,apellidos,dni,email,telefono) VALUES ('"
-                                                                      + oCliente.Usuario + "','"
-                                                                      + oCliente.Contraseña + "','"
-                                                                      + oCliente.Nombre + "','"
-                                                                      + oCliente.Apellido + "','"
-                                                                      + oCliente.Dni + "','"
-                                                                      + oCliente.Email + "','"
-                                                                      + oCliente.Telefono +"')";
+                SqlCommand comando2 = new SqlCommand();
+                SqlCommand comando3 = new SqlCommand();
+                comando.CommandText = "INSERT INTO Clientes (usuario,contrasena,nombres,apellidos,email) VALUES ('"
+                                              + oCliente.Usuario + "','"
+                                              + oCliente.Contrasena + "','"
+                                              + oCliente.Nombre + "','"
+                                              + oCliente.Apellido + "','"
+                                              + oCliente.Email + "')";
                 comando.Connection = conector;
-                comando.ExecuteNonQuery();
-            }
-        }
+                comando2.Connection = conector;
+                comando3.Connection = conector;
+                comando.ExecuteNonQuery(); //Agregamos el Cliente nuevo
+
+                comando3.CommandText = "SELECT TOP 1 idCliente FROM Clientes ORDER BY idCliente DESC"; //Agarramos su ID que se generó automáticamente
+                SqlDataReader reader = comando3.ExecuteReader();
+                if (reader.Read())
+                {
+                  idClienteNuevo = (int)reader["idCliente"]; //La volcamos en esta variable
+                }
+                reader.Close(); //Re importante cerrar
+                comando2.CommandText = "INSERT INTO Carteras(idCliente, cvu) VALUES(" //Generamos la cartera de este cliente
+                                                     + idClienteNuevo + ", '"     //Lo vinculamos al mismo.
+                                                     + "12463256')";             
+                comando2.ExecuteNonQuery();
+      }
+    }
 
         // PUT: api/Clientes/5
         public void Put(int id, [FromBody] Models.Clientes oCliente)
@@ -74,12 +91,10 @@ namespace MyMoney.Controllers
                 conector.Open();
                 SqlCommand comando = new SqlCommand();
                 comando.CommandText = "UPDATE Clientes SET usuario = '" + oCliente.Usuario
-                                                      + "',contraseña = '" + oCliente.Contraseña
+                                                      + "',contraseña = '" + oCliente.Contrasena
                                                       + "',nombres = '" + oCliente.Nombre
                                                       + "',apellidos = '" + oCliente.Apellido
-                                                      + "',dni = '" + oCliente.Dni
                                                       + "',email = '" + oCliente.Email
-                                                      + "',telefono = '" + oCliente.Telefono
                                                       + "' WHERE idCliente =" + id;
                 comando.Connection = conector;
                 comando.ExecuteNonQuery();
@@ -97,5 +112,5 @@ namespace MyMoney.Controllers
 
             }
         }
-    }
+  }
 }
